@@ -1,0 +1,2734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NTT Groups KSA - Investment Opportunity | SAR 14M Valued Company</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #1a237e;
+            --primary-color: #1a237e;
+            --secondary: #3498db;
+            --accent: #2ecc71;
+            --warning: #f39c12;
+            --danger: #e74c3c;
+            --light: #ffffff;
+            --dark: #2c3e50;
+            --gray: #f4f6f9;
+            --gold: #ffd700;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background: var(--light);
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-decoration: none;
+            color: var(--light);
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--light);
+            color: var(--primary);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: var(--light);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            background: rgba(255,255,255,0.2);
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-toggle {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+            color: var(--light);
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+
+        .dropdown-toggle:hover {
+            background: rgba(255,255,255,0.2);
+        }
+
+        .dropdown-arrow {
+            font-size: 0.8rem;
+            transition: transform 0.3s;
+        }
+
+        .dropdown.active .dropdown-arrow {
+            transform: rotate(180deg);
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: var(--light);
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+            min-width: 250px;
+            margin-top: 0.5rem;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s;
+        }
+
+        .dropdown.active .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem 1.5rem;
+            color: var(--dark);
+            text-decoration: none;
+            transition: all 0.3s;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .dropdown-item:first-child {
+            border-radius: 10px 10px 0 0;
+        }
+
+        .dropdown-item:last-child {
+            border-radius: 0 0 10px 10px;
+            border-bottom: none;
+        }
+
+        .dropdown-item:hover {
+            background: var(--gray);
+            padding-left: 2rem;
+        }
+
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            gap: 0.25rem;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .mobile-menu span {
+            width: 25px;
+            height: 3px;
+            background: var(--light);
+            transition: all 0.3s;
+        }
+
+        .mobile-menu.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .mobile-menu.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-menu.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -6px);
+        }
+
+        /* Page Styles */
+        .page {
+            display: none;
+            animation: fadeIn 0.5s;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1a237e, #3498db);
+            color: var(--light);
+            padding: 5rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff08" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,133.3C960,128,1056,96,1152,96C1248,96,1344,128,1392,144L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom;
+            background-size: cover;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            animation: slideInDown 1s;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .hero-stat {
+            padding: 1.5rem;
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        .hero-stat-value {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--gold);
+        }
+
+        .hero-stat-label {
+            margin-top: 0.5rem;
+            opacity: 0.9;
+        }
+
+        @keyframes slideInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            color: var(--primary);
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #666;
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+        }
+
+        /* Cards Grid */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .card {
+            background: var(--light);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+
+        .card-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .card-value {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--secondary);
+            margin: 1rem 0;
+        }
+
+        /* Investment Cards */
+        .investment-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .investment-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        /* Equity Partner Card Styles */
+        .equity-partner-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            border: 2px solid #ffd700;
+        }
+
+        .investment-subtitle {
+            text-align: center;
+            padding: 0 2rem;
+            color: #2ecc71;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .investment-description {
+            padding: 0 2rem 1rem;
+            color: #555;
+            text-align: center;
+        }
+
+        .equity-calculator {
+            padding: 1.5rem;
+            background: white;
+            margin: 0 1rem;
+            border-radius: 15px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        }
+
+        .currency-toggle {
+            display: flex;
+            justify-content: center;
+            gap: 0;
+            margin-bottom: 1.5rem;
+        }
+
+        .currency-btn {
+            padding: 0.5rem 1.5rem;
+            border: 2px solid #e0e0e0;
+            background: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+
+        .currency-btn:first-child {
+            border-radius: 8px 0 0 8px;
+        }
+
+        .currency-btn:last-child {
+            border-radius: 0 8px 8px 0;
+            border-left: none;
+        }
+
+        .currency-btn.active {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+
+        .calculator-input {
+            margin-bottom: 2rem;
+        }
+
+        .calculator-input label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .input-group {
+            display: flex;
+            align-items: center;
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 0.75rem;
+            border: 2px solid #e0e0e0;
+            transition: border-color 0.3s ease;
+        }
+
+        .input-group:focus-within {
+            border-color: var(--primary-color);
+        }
+
+        .currency-symbol {
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-right: 0.5rem;
+        }
+
+        .calculator-input input[type="number"] {
+            flex: 1;
+            border: none;
+            background: transparent;
+            font-size: 1.2rem;
+            font-weight: 600;
+            outline: none;
+        }
+
+        .slider-container {
+            margin-top: 1rem;
+        }
+
+        .slider-container input[type="range"] {
+            width: 100%;
+            height: 6px;
+            border-radius: 3px;
+            background: #e0e0e0;
+            outline: none;
+            -webkit-appearance: none;
+        }
+
+        .slider-container input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .slider-container input[type="range"]::-moz-range-thumb {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .slider-labels {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 0.5rem;
+            font-size: 0.85rem;
+            color: #666;
+        }
+
+        .calculator-results {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .result-card {
+            text-align: center;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .result-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .result-icon {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .result-label {
+            font-size: 0.85rem;
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+
+        .result-value {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .profit-share-visual {
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .chart-legend {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 3px;
+        }
+
+        .investment-header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: var(--light);
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .investment-header.special {
+            background: linear-gradient(135deg, var(--accent), #00e676);
+        }
+
+        .investment-header.premium {
+            background: linear-gradient(135deg, var(--warning), var(--gold));
+        }
+
+        .investment-header h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--light);
+        }
+
+        .investment-header p {
+            opacity: 0.95;
+        }
+
+        .investment-price {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--primary);
+            text-align: center;
+            padding: 2rem;
+            background: var(--gray);
+        }
+
+        .investment-features {
+            padding: 2rem;
+            list-style: none;
+            flex-grow: 1;
+        }
+
+        .investment-features li {
+            padding: 1rem;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .investment-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* Technology Section */
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .tech-card {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: var(--light);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .tech-card:hover {
+            transform: scale(1.05);
+        }
+
+        .tech-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Timeline */
+        .timeline-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 3rem 0;
+            position: relative;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .timeline-container::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 5%;
+            right: 5%;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+        }
+
+        .timeline-item {
+            background: var(--light);
+            padding: 1.5rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            min-width: 120px;
+        }
+
+        .timeline-item h4 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-value {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--secondary);
+        }
+
+        /* Badge */
+        .badge {
+            display: inline-block;
+            padding: 0.35rem 1rem;
+            background: var(--accent);
+            color: var(--light);
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .badge-ongoing {
+            background: #2ecc71;
+        }
+
+        .badge-planning {
+            background: #f39c12;
+        }
+
+        .badge-completed {
+            background: var(--accent);
+        }
+
+        .badge-progress {
+            background: #3498db;
+        }
+
+        /* Data Table */
+        .data-table {
+            width: 100%;
+            background: var(--light);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .data-table thead {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: var(--light);
+        }
+
+        .data-table th,
+        .data-table td {
+            padding: 1.2rem;
+            text-align: left;
+        }
+
+        .data-table tbody tr {
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            transition: background 0.3s;
+        }
+
+        .data-table tbody tr:hover {
+            background: var(--gray);
+        }
+
+        /* Portfolio Grid */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .portfolio-card {
+            background: var(--light);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .portfolio-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .portfolio-header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: var(--light);
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .portfolio-content {
+            padding: 2rem;
+        }
+
+        .portfolio-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .portfolio-stat {
+            text-align: center;
+            padding: 1rem;
+            background: var(--gray);
+            border-radius: 10px;
+        }
+
+        .portfolio-stat-value {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        .portfolio-stat-label {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 0.5rem;
+        }
+
+        /* FAQ Styles */
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--light);
+            border-radius: 15px;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+
+        .faq-item.active {
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            font-weight: bold;
+            color: var(--primary);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s;
+        }
+
+        .faq-question:hover {
+            background: var(--gray);
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-question::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 1.5rem;
+            max-height: 500px;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: var(--light);
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            margin: 0.5rem;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .btn-success {
+            background: linear-gradient(135deg, var(--accent), #00e676);
+        }
+
+        .btn-warning {
+            background: linear-gradient(135deg, var(--warning), var(--gold));
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: var(--light);
+        }
+
+        /* Contact Form */
+        .contact-form {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--light);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group.full {
+            grid-column: span 2;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        .form-input,
+        .form-select,
+        .form-textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: all 0.3s;
+            background: var(--light);
+        }
+
+        .form-input:focus,
+        .form-select:focus,
+        .form-textarea:focus {
+            border-color: var(--secondary);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+        }
+
+        .form-textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        /* Stats Grid - Improved */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .stat-card {
+            background: var(--light);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+        }
+
+        .stat-card.green::before {
+            background: linear-gradient(90deg, var(--accent), #00e676);
+        }
+
+        .stat-card.gold::before {
+            background: linear-gradient(90deg, var(--warning), var(--gold));
+        }
+
+        .stat-card.purple::before {
+            background: linear-gradient(90deg, #667eea, #764ba2);
+        }
+
+        .stat-card.teal::before {
+            background: linear-gradient(90deg, #00bcd4, #00acc1);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+        }
+
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: #666;
+            font-size: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--dark), #34495e);
+            color: var(--light);
+            padding: 3rem 0 1rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: var(--gold);
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            padding: 0.5rem 0;
+        }
+
+        .footer-section ul li a {
+            color: var(--light);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section ul li a:hover {
+            color: var(--gold);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .cards-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .mobile-menu {
+                display: flex;
+            }
+
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 60px;
+                flex-direction: column;
+                background: var(--dark);
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                box-shadow: 0 10px 27px rgba(0,0,0,0.05);
+                padding: 2rem 0;
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            table {
+                font-size: 0.9rem;
+            }
+
+            .timeline-container {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+
+            .timeline-container::before {
+                display: none;
+            }
+
+            .timeline-item {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            /* Equity Partner Calculator Mobile Styles */
+            .calculator-results {
+                grid-template-columns: 1fr;
+                gap: 0.75rem;
+            }
+
+            .result-card {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0.75rem 1rem;
+            }
+
+            .result-icon {
+                font-size: 1.2rem;
+                margin-bottom: 0;
+                margin-right: 1rem;
+            }
+
+            .result-label {
+                flex: 1;
+                text-align: left;
+                margin-bottom: 0;
+            }
+
+            .result-value {
+                font-size: 1.1rem;
+            }
+
+            .chart-legend {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .equity-calculator {
+                margin: 0 0.5rem;
+                padding: 1rem;
+            }
+
+            #equityChart {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="#" class="logo">
+                <div class="logo-icon">NTT</div>
+                <span>NTT Groups KSA</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a class="nav-link active" onclick="showPage('home')">Home</a></li>
+                <li><a class="nav-link" onclick="showPage('about')">About</a></li>
+                <li><a class="nav-link" onclick="showPage('investment')">Investment</a></li>
+                <li><a class="nav-link" onclick="showPage('portfolio')">Portfolio</a></li>
+                <li><a class="nav-link" onclick="showPage('technology')">Technology</a></li>
+                <li><a class="nav-link" onclick="showPage('faq')">FAQ</a></li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" onclick="toggleDropdown(event)">
+                        Resources <span class="dropdown-arrow">▼</span>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="#" onclick="alert('Please update this link to your NTT Groups information page'); return false;" class="dropdown-item">
+                            <i>🌐</i> About NTT Groups
+                        </a>
+                        <a href="https://www.mshakil.info/" target="_blank" class="dropdown-item">
+                            <i>👔</i> About CEO - Eng. Mohammad Shakil
+                        </a>
+                        <a href="#" onclick="alert('Please update this link to your UK SPA document'); return false;" class="dropdown-item">
+                            <i>📄</i> Old SPA with UK
+                        </a>
+                        <a href="#" onclick="alert('Please update this link to your legal documents'); return false;" class="dropdown-item">
+                            <i>📑</i> Legal Documents
+                        </a>
+                    </div>
+                </li>
+                <li><a class="nav-link" onclick="showPage('contact')">Contact</a></li>
+            </ul>
+            <div class="mobile-menu" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page 1: Home -->
+    <div id="home" class="page active">
+        <div class="hero">
+            <div class="hero-content">
+                <h1 class="fade-in">Investment Opportunity of a Lifetime</h1>
+                <p class="hero-subtitle">NTT Groups KSA - Professionally Valued at SAR 14 Million | SAR 50M+ Annual Turnover</p>
+                <p style="font-size: 1.2rem; margin: 2rem 0;">Join us with just SAR 2 Million investment for 21-22% equity stake</p>
+                
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <div class="hero-stat-value">34+</div>
+                        <div class="hero-stat-label">Years Global Experience</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-value">18+</div>
+                        <div class="hero-stat-label">Years in Saudi Arabia</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-value">SAR 50M+</div>
+                        <div class="hero-stat-label">Annual Turnover History</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-value">SAR 400M</div>
+                        <div class="hero-stat-label">Subcontracting Business</div>
+                    </div>
+                </div>
+
+                <div style="margin-top: 3rem;">
+                    <button class="btn btn-success" onclick="showPage('investment')">Explore Investment</button>
+                    <button class="btn btn-outline" onclick="showPage('faq')" style="background: rgba(255,255,255,0.1); border-color: white; color: white;">Why Invest?</button>
+                </div>
+            </div>
+        </div>
+
+        <section class="section">
+            <h2 class="section-title">Why Choose NTT Groups KSA?</h2>
+            <p class="section-subtitle">34 years of excellence under visionary leadership of Eng. Mohammad Shakil</p>
+
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">💎</div>
+                    <h3>Verified Valuation</h3>
+                    <div class="card-value">SAR 14M</div>
+                    <p>Professional UK entity valuation completed in January 2024 for NTT Groups KSA</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🚀</div>
+                    <h3>Technology Portfolio</h3>
+                    <div class="card-value">SAR 150M</div>
+                    <p>17 IT, App & Platform products 100% ready for commercial launch</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🏗️</div>
+                    <h3>Subcontracting Business</h3>
+                    <div class="card-value">SAR 400M</div>
+                    <p>Traditional business with 9-10% net profit, 1.5 years timeline</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🏆</div>
+                    <h3>Leadership Track Record</h3>
+                    <div class="card-value">SAR 21.6B</div>
+                    <p>Projects led by CEO Eng. Mohammad Shakil (Former Deputy Planning Manager, THALES)</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">💰</div>
+                    <h3>Receivables Strategy</h3>
+                    <div class="card-value">SAR 15M</div>
+                    <p>25% for immediate business use, 75% for settling obligations</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">📈</div>
+                    <h3>ROI Projection</h3>
+                    <div class="card-value">400%</div>
+                    <p>Expected returns over 7 years with multiple revenue streams</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" style="background: var(--gray);">
+            <h2 class="section-title">Investment Timeline & Returns</h2>
+            <div class="timeline-container">
+                <div class="timeline-item">
+                    <h4>Year 2</h4>
+                    <div class="timeline-value">50% ROI</div>
+                    <p>Initial Returns</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>Year 4</h4>
+                    <div class="timeline-value">200% ROI</div>
+                    <p>Growth Phase</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>Year 6</h4>
+                    <div class="timeline-value">300% ROI</div>
+                    <p>Expansion</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>Year 7</h4>
+                    <div class="timeline-value">400% ROI</div>
+                    <p>Full Potential</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Page 2: About -->
+    <div id="about" class="page">
+        <section class="section">
+            <h2 class="section-title">About NTT Groups KSA</h2>
+            <p class="section-subtitle">A legacy of excellence spanning three decades under visionary leadership</p>
+
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">🌍</div>
+                    <h3>Global Presence</h3>
+                    <p>Operations in 22 countries with 12 subsidiary companies and a network spanning 65+ countries through WBG</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🏢</div>
+                    <h3>Saudi Arabia Focus</h3>
+                    <p>18+ years of dedicated operations in KSA, aligned with Vision 2030 initiatives</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🤝</div>
+                    <h3>Trusted Partners</h3>
+                    <p>Approved contractors for ARAMCO, STC, Mobily, SABIC, and other major corporations</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" style="background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); border-radius: 20px; margin: 3rem auto;">
+            <h2 class="section-title">Leadership Excellence</h2>
+            <div style="max-width: 1000px; margin: 0 auto;">
+                <div class="card" style="padding: 3rem; background: white;">
+                    <div style="text-align: center; margin-bottom: 2rem;">
+                        <div style="width: 150px; height: 150px; background: linear-gradient(135deg, var(--primary), var(--secondary)); border-radius: 50%; margin: 0 auto 1.5rem; display: flex; align-items: center; justify-content: center;">
+                            <span style="font-size: 3rem; color: white;">👔</span>
+                        </div>
+                        <h3 style="color: var(--primary); font-size: 2rem; margin-bottom: 0.5rem;">Eng. Mohammad Shakil</h3>
+                        <p style="color: var(--secondary); font-size: 1.3rem; font-weight: 600;">Group CEO & Vice Chairman</p>
+                    </div>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                        <div>
+                            <h4 style="color: var(--primary); margin-bottom: 1rem;">Academic Excellence</h4>
+                            <ul style="list-style: none; padding: 0;">
+                                <li style="padding: 0.5rem 0;">✓ M.Tech in Computer Science & Engineering</li>
+                                <li style="padding: 0.5rem 0;">✓ MBA in Business Administration</li>
+                                <li style="padding: 0.5rem 0;">✓ B.E. in Electronics & Communication</li>
+                                <li style="padding: 0.5rem 0;">✓ PMP - PMI (Boston University, USA)</li>
+                                <li style="padding: 0.5rem 0;">✓ CPTE - American Board</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 style="color: var(--primary); margin-bottom: 1rem;">Professional Achievements</h4>
+                            <ul style="list-style: none; padding: 0;">
+                                <li style="padding: 0.5rem 0;">✓ 34+ years of industry experience</li>
+                                <li style="padding: 0.5rem 0;">✓ Led SAR 21.6 billion in projects<br>&nbsp;&nbsp;&nbsp;<small>(as Deputy Planning Manager, THALES)</small></li>
+                                <li style="padding: 0.5rem 0;">✓ Strategic advisor to multiple governments</li>
+                                <li style="padding: 0.5rem 0;">✓ VP of World Business Groups (WBG)</li>
+                                <li style="padding: 0.5rem 0;">✓ Director of 12 subsidiary companies</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div style="text-align: center; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #e0e0e0;">
+                        <p style="color: #666; font-style: italic;">"Visionary leadership driving global business transformation and technological innovation"</p>
+                        <a href="https://www.mshakil.info/" target="_blank" class="btn btn-outline" style="margin-top: 1rem;">View Full Profile</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" style="background: var(--gray);">
+            <h2 class="section-title">Our Credentials</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <h3>Major Clients</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: 0.5rem 0;">✓ ARAMCO</li>
+                        <li style="padding: 0.5rem 0;">✓ STC (Saudi Telecom Company)</li>
+                        <li style="padding: 0.5rem 0;">✓ Mobily</li>
+                        <li style="padding: 0.5rem 0;">✓ SABIC</li>
+                        <li style="padding: 0.5rem 0;">✓ Etihad Etisalat</li>
+                        <li style="padding: 0.5rem 0;">✓ Saudi Binladin Group</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Technology Partners</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: 0.5rem 0;">✓ Ericsson</li>
+                        <li style="padding: 0.5rem 0;">✓ Nokia</li>
+                        <li style="padding: 0.5rem 0;">✓ Wipro</li>
+                        <li style="padding: 0.5rem 0;">✓ CISCO</li>
+                        <li style="padding: 0.5rem 0;">✓ L&T</li>
+                        <li style="padding: 0.5rem 0;">✓ MMG</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Key Achievements</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: 0.5rem 0;">✓ SAR 21.6B Projects Delivered</li>
+                        <li style="padding: 0.5rem 0;">✓ 500+ Enterprise Clients</li>
+                        <li style="padding: 0.5rem 0;">✓ 150+ Completed Projects</li>
+                        <li style="padding: 0.5rem 0;">✓ 95% Client Retention Rate</li>
+                        <li style="padding: 0.5rem 0;">✓ ISO Certified Operations</li>
+                        <li style="padding: 0.5rem 0;">✓ Vision 2030 Aligned</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Company Evolution</h2>
+            <div class="timeline-container">
+                <div class="timeline-item">
+                    <h4>1991</h4>
+                    <p>Company Founded</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>2000</h4>
+                    <p>International Expansion<br><small>Launched GCC Operations</small></p>
+                </div>
+                <div class="timeline-item">
+                    <h4>2006</h4>
+                    <p>KSA Operations Started</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>2007</h4>
+                    <p>Diversification<br><small>Multi-Sector Portfolio</small></p>
+                </div>
+                <div class="timeline-item">
+                    <h4>2010</h4>
+                    <p>Strategic Restructuring<br><small>Global Expansion</small></p>
+                </div>
+                <div class="timeline-item">
+                    <h4>2020</h4>
+                    <p>Technology Portfolio Launch</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>2030</h4>
+                    <p>Planned IPO</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" style="background: var(--gray);">
+            <h2 class="section-title">Financial Strength</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <h3>Revenue Streams</h3>
+                    <div class="card-value">5+</div>
+                    <p>Diversified income sources across multiple sectors</p>
+                </div>
+                <div class="card">
+                    <h3>Annual Turnover</h3>
+                    <div class="card-value">SAR 50M+</div>
+                    <p>Consistent revenue generation year over year</p>
+                </div>
+                <div class="card">
+                    <h3>Liability Reduction</h3>
+                    <div class="card-value">33%</div>
+                    <p>Successfully reduced from SAR 3M to SAR 2M</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Page 3: Investment -->
+    <div id="investment" class="page">
+        <section class="section">
+            <h2 class="section-title">Investment Opportunities</h2>
+            <p class="section-subtitle">Multiple pathways to partnership with exceptional returns</p>
+
+            <div class="cards-grid">
+                <div class="investment-card">
+                    <div class="investment-header">
+                        <h3>Strategic/Equity Partner</h3>
+                        <p>Core Investment Opportunity</p>
+                    </div>
+                    <div class="investment-price">SAR 2M</div>
+                    <ul class="investment-features">
+                        <li>21-22% equity stake (14.28% + 7-8% bonus)</li>
+                        <li>Board representation rights</li>
+                        <li>Access to 25% share (SAR 3.75M) from SAR 15M receivables collection</li>
+                        <li>Quarterly profit distributions</li>
+                        <li>Technology transfer rights</li>
+                        <li>Exit rights after 2 years + 3 months notice</li>
+                        <li>First right of refusal on new ventures</li>
+                    </ul>
+                    <div style="padding: 2rem; text-align: center;">
+                        <button class="btn btn-success" onclick="showPage('contact')">Invest Now</button>
+                    </div>
+                </div>
+
+                <div class="investment-card equity-partner-card">
+                    <div class="investment-header">
+                        <h3>Equity Partner – Flexible Investment</h3>
+                        <p style="color: #ffd700;">Your Choice Investment Model</p>
+                    </div>
+                    <div class="investment-subtitle">
+                        <em>"Flexible Investment, Flexible Returns"</em>
+                    </div>
+                    <div class="investment-description">
+                        <p>Choose your Equity Partnership level according to your investment preference. Our live calculator provides real-time equity allocation and return estimates to empower transparent decision-making.</p>
+                    </div>
+                    
+                    <div class="equity-calculator">
+                        <div class="currency-toggle">
+                            <button id="sarBtn" class="currency-btn active" onclick="toggleCurrency('SAR')">SAR</button>
+                            <button id="usdBtn" class="currency-btn" onclick="toggleCurrency('USD')">USD</button>
+                        </div>
+                        
+                        <div class="calculator-input">
+                            <label>Investment Amount</label>
+                            <div class="input-group">
+                                <span class="currency-symbol" id="currencySymbol">SAR</span>
+                                <input type="number" id="investmentAmount" placeholder="Enter amount" min="100000" step="100000" oninput="calculateEquity()">
+                            </div>
+                            <div class="slider-container">
+                                <input type="range" id="investmentSlider" min="100000" max="10000000" step="100000" value="1000000" oninput="updateFromSlider()">
+                                <div class="slider-labels">
+                                    <span>100K</span>
+                                    <span>5M</span>
+                                    <span>10M</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="calculator-results">
+                            <div class="result-card">
+                                <div class="result-icon">📊</div>
+                                <div class="result-label">Equity Stake</div>
+                                <div class="result-value" id="equityPercentage">0%</div>
+                            </div>
+                            <div class="result-card">
+                                <div class="result-icon">💰</div>
+                                <div class="result-label">Annual Return</div>
+                                <div class="result-value" id="annualReturn">0</div>
+                            </div>
+                            <div class="result-card">
+                                <div class="result-icon">📈</div>
+                                <div class="result-label">5-Year Projection</div>
+                                <div class="result-value" id="fiveYearReturn">0</div>
+                            </div>
+                        </div>
+                        
+                        <div class="profit-share-visual">
+                            <canvas id="equityChart" width="200" height="200"></canvas>
+                            <div class="chart-legend">
+                                <div class="legend-item">
+                                    <span class="legend-color" style="background: #2ecc71;"></span>
+                                    <span>Your Equity: <span id="yourEquityLegend">0%</span></span>
+                                </div>
+                                <div class="legend-item">
+                                    <span class="legend-color" style="background: #34495e;"></span>
+                                    <span>Other Shareholders: <span id="othersEquityLegend">100%</span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="padding: 2rem; text-align: center;">
+                        <button class="btn btn-success" onclick="proceedWithEquityPartner()">Proceed with Equity Partner Investment</button>
+                    </div>
+                </div>
+
+                <div class="investment-card">
+                    <div class="investment-header">
+                        <h3>Franchise Partner</h3>
+                        <p>Regional Expansion Partner</p>
+                    </div>
+                    <div class="investment-price">SAR 500K+</div>
+                    <ul class="investment-features">
+                        <li>Regional franchise rights</li>
+                        <li>Complete business model transfer</li>
+                        <li>Training & support included</li>
+                        <li>Technology platform access</li>
+                        <li>Marketing support</li>
+                        <li>Revenue sharing model</li>
+                        <li>Protected territory rights</li>
+                    </ul>
+                    <div style="padding: 2rem; text-align: center;">
+                        <button class="btn" onclick="showPage('contact')">Apply Now</button>
+                    </div>
+                </div>
+
+                <div class="investment-card">
+                    <div class="investment-header special">
+                        <h3>Share Purchase</h3>
+                        <p>Direct Equity Investment</p>
+                    </div>
+                    <div class="investment-price">Flexible</div>
+                    <ul class="investment-features">
+                        <li>Minimum 100,000 shares</li>
+                        <li>SAR 1.00 per share</li>
+                        <li>Direct equity ownership</li>
+                        <li>Quarterly dividends</li>
+                        <li>Voting rights included</li>
+                        <li>Tradeable after lock-in period</li>
+                        <li>Capital appreciation potential</li>
+                    </ul>
+                    <div style="padding: 2rem; text-align: center;">
+                        <button class="btn btn-success" onclick="showPage('contact')">Buy Shares</button>
+                    </div>
+                </div>
+
+                <div class="investment-card">
+                    <div class="investment-header special">
+                        <h3>Ongoing Project Partner</h3>
+                        <p>Subcontracting Business</p>
+                    </div>
+                    <div class="investment-price">SAR 400M<br><span style="font-size: 1rem; font-weight: normal;">Portfolio Value</span></div>
+                    <ul class="investment-features">
+                        <li>Traditional business portfolio</li>
+                        <li>Telecom & construction projects</li>
+                        <li>9-10% guaranteed net profit</li>
+                        <li>1.5 years project timeline</li>
+                        <li>ROI achievable within 2 years</li>
+                        <li>Supervision & management only</li>
+                        <li>Minimal operational costs</li>
+                    </ul>
+                    <div style="padding: 2rem; text-align: center;">
+                        <button class="btn" onclick="showPage('contact')">Learn More</button>
+                    </div>
+                </div>
+
+                <div class="investment-card">
+                    <div class="investment-header premium">
+                        <h3>IT/App/Platform Partner</h3>
+                        <p>Technology Investment</p>
+                    </div>
+                    <div class="investment-price">SAR 150M<br><span style="font-size: 1rem; font-weight: normal;">Portfolio Value</span></div>
+                    <ul class="investment-features">
+                        <li>17 products 100% ready</li>
+                        <li>Commercial launch ready</li>
+                        <li>IT, App & Platform solutions</li>
+                        <li>Immediate market deployment</li>
+                        <li>Proven technology stack</li>
+                        <li>IP rights included</li>
+                        <li>High ROI potential</li>
+                    </ul>
+                    <div style="padding: 2rem; text-align: center;">
+                        <button class="btn btn-warning" onclick="showPage('contact')">Invest Now</button>
+                    </div>
+                </div>
+
+                <div class="investment-card">
+                    <div class="investment-header">
+                        <h3>Project Partner</h3>
+                        <p>Joint Venture Options</p>
+                    </div>
+                    <div class="investment-price">Custom</div>
+                    <ul class="investment-features">
+                        <li>Project-specific partnerships</li>
+                        <li>Shared resources & expertise</li>
+                        <li>Risk & reward sharing model</li>
+                        <li>Government contract access</li>
+                        <li>Technology collaboration</li>
+                        <li>Flexible exit strategies</li>
+                        <li>Customized terms available</li>
+                    </ul>
+                    <div style="padding: 2rem; text-align: center;">
+                        <button class="btn btn-outline" onclick="showPage('contact')">Discuss</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" style="background: var(--gray);">
+            <h2 class="section-title">Financial Overview</h2>
+            <div style="max-width: 900px; margin: 3rem auto;">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Business Segment</th>
+                            <th>Value/Investment</th>
+                            <th>Returns/Profit</th>
+                            <th>Timeline</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Company Valuation</strong></td>
+                            <td>SAR 14 Million</td>
+                            <td>-</td>
+                            <td><span class="badge">UK Verified</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Strategic Investment</strong></td>
+                            <td>SAR 2 Million</td>
+                            <td>21-22% Equity</td>
+                            <td>Immediate</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Subcontracting Business</strong></td>
+                            <td>SAR 400 Million</td>
+                            <td>9-10% Net Profit</td>
+                            <td>1.5 Years</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Technology Portfolio</strong></td>
+                            <td>SAR 150 Million</td>
+                            <td>High Growth Potential</td>
+                            <td>Ready to Launch</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Receivables Collection</strong></td>
+                            <td>SAR 15 Million</td>
+                            <td>25% Business Use</td>
+                            <td>In Progress</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+
+    <!-- Page 4: Portfolio -->
+    <div id="portfolio" class="page">
+        <section class="section">
+            <h2 class="section-title">Business Portfolio</h2>
+            <p class="section-subtitle">Comprehensive solutions across Saudi Arabia's strategic sectors</p>
+
+            <div class="portfolio-grid">
+                <div class="portfolio-card">
+                    <div class="portfolio-header">
+                        <h3>Telecom Infrastructure</h3>
+                    </div>
+                    <div class="portfolio-content">
+                        <p>End-to-end telecommunications solutions supporting Saudi Arabia's digital transformation</p>
+                        <div class="portfolio-stats">
+                            <div class="portfolio-stat">
+                                <div class="portfolio-stat-value">500+</div>
+                                <div class="portfolio-stat-label">5G Towers Deployed</div>
+                            </div>
+                            <div class="portfolio-stat">
+                                <div class="portfolio-stat-value">1000km+</div>
+                                <div class="portfolio-stat-label">Fiber Optic Networks</div>
+                            </div>
+                            <div class="portfolio-stat">
+                                <div class="portfolio-stat-value">99.9%</div>
+                                <div class="portfolio-stat-label">Network Uptime</div>
+                            </div>
+                            <div class="portfolio-stat">
+                                <div class="portfolio-stat-value">24/7</div>
+                                <div class="portfolio-stat-label">Support Services</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-card">
+                    <div class="portfolio-header">
+                        <h3>Construction & Engineering</h3>
+                    </div>
+                    <div class="portfolio-content">
+                        <p>Large-scale infrastructure projects from concept to completion</p>
+                        <div class="portfolio-stats">
+                            <div class="portfolio-stat">
+                                <div class="portfolio-stat-value">150+</div>
+                                <div class="portfolio-stat-label">Projects Delivered</div>
+                            </div>
+                            <div class="portfolio-stat">
+                                <div class="portfolio-stat-value">Zero</div>
+                                <div class="portfolio-stat-label">Safety Incidents</div>
+                            </div>
+                            <div class="portfolio-stat">
+                                <div class="portfolio-stat-value">ISO 9001</div>
+                                <div class="portfolio-stat-label">Quality Certified</div>
+                            </div>
+                            <div class="portfolio-stat">
+                                <div class="portfolio-stat-value">LEED</div>
+                                <div class="portfolio-stat-label">Green Building</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-card">
+                    <div class="portfolio-header">
+                        <h3>Digital Solutions</h3>
+                    </div>
+                    <div class="portfolio-content">
+                        <p>Cutting-edge technology products and platforms for enterprise transformation</p>
+                        <div class="portfolio-stats">
+                            <div class="portfolio-stat">
+                                <div class="portfolio-stat-value">17</div>
+                                <div class="portfolio-stat-label">Products Ready</div>
+                            </div>
+                            <div class="portfolio-stat">
+                                <div class="portfolio-stat-value">100%</div>
+                                <div class="portfolio-stat-label">Cloud Native</div>
+                            </div>
+                            <div class="portfolio-stat">
+                                <div class="portfolio-stat-value">AI/ML</div>
+                                <div class="portfolio-stat-label">Powered</div>
+                            </div>
+                            <div class="portfolio-stat">
+                                <div class="portfolio-stat-value">5M+</div>
+                                <div class="portfolio-stat-label">Users Served</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-card">
+                    <div class="portfolio-header">
+                        <h3>Energy & Utilities</h3>
+                    </div>
+                    <div class="portfolio-content">
+                        <p>Sustainable energy solutions and critical infrastructure development</p>
+                        <div class="portfolio-stats">
+                            <div class="portfolio-stat">
+                                <div class="portfolio-stat-value">50MW</div>
+                                <div class="portfolio-stat-label">Power Capacity</div>
+                            </div>
+                            <div class="portfolio-stat">
+                                <div class="portfolio-stat-value">30+</div>
+                                <div class="portfolio-stat-label">Energy Projects</div>
+                            </div>
+                            <div class="portfolio-stat">
+                                <div class="portfolio-stat-value">40%</div>
+                                <div class="portfolio-stat-label">Renewable Focus</div>
+                            </div>
+                            <div class="portfolio-stat">
+                                <div class="portfolio-stat-value">Vision 2030</div>
+                                <div class="portfolio-stat-label">Aligned</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-card">
+                    <div class="portfolio-header">
+                        <h3>Smart Cities & IoT</h3>
+                    </div>
+                    <div class="portfolio-content">
+                        <p>Intelligent urban solutions for Saudi Arabia's mega projects</p>
+                        <div class="portfolio-stats">
+                            <div class="portfolio-stat">
+                                <div class="portfolio-stat-value">NEOM</div>
+                                <div class="portfolio-stat-label">Partner</div>
+                            </div>
+                            <div class="portfolio-stat">
+                                <div class="portfolio-stat-value">10K+</div>
+                                <div class="portfolio-stat-label">IoT Devices</div>
+                            </div>
+                            <div class="portfolio-stat">
+                                <div class="portfolio-stat-value">Real-time</div>
+                                <div class="portfolio-stat-label">Analytics</div>
+                            </div>
+                            <div class="portfolio-stat">
+                                <div class="portfolio-stat-value">24/7</div>
+                                <div class="portfolio-stat-label">Monitoring</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-card">
+                    <div class="portfolio-header">
+                        <h3>Consulting & Advisory</h3>
+                    </div>
+                    <div class="portfolio-content">
+                        <p>Strategic consulting for business transformation and growth</p>
+                        <div class="portfolio-stats">
+                            <div class="portfolio-stat">
+                                <div class="portfolio-stat-value">500+</div>
+                                <div class="portfolio-stat-label">Clients Advised</div>
+                            </div>
+                            <div class="portfolio-stat">
+                                <div class="portfolio-stat-value">95%</div>
+                                <div class="portfolio-stat-label">Success Rate</div>
+                            </div>
+                            <div class="portfolio-stat">
+                                <div class="portfolio-stat-value">PMO</div>
+                                <div class="portfolio-stat-label">Excellence</div>
+                            </div>
+                            <div class="portfolio-stat">
+                                <div class="portfolio-stat-value">Global</div>
+                                <div class="portfolio-stat-label">Best Practices</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 20px; color: white; margin: 3rem auto;">
+            <h2 class="section-title" style="color: white;">Subsidiary Business Units</h2>
+            <p class="section-subtitle" style="color: rgba(255,255,255,0.9);">Strategic investments across digital transformation sectors</p>
+            
+            <div class="cards-grid">
+                <div class="card" style="background: rgba(255,255,255,0.95); min-height: 450px;">
+                    <div style="background: linear-gradient(135deg, #3498db, #2ecc71); padding: 1.5rem; margin: -2rem -2rem 1.5rem -2rem; border-radius: 20px 20px 0 0;">
+                        <h3 style="color: white; text-align: center; margin: 0;">World Business Groups (WBG)</h3>
+                        <p style="color: rgba(255,255,255,0.9); text-align: center; margin-top: 0.5rem; font-size: 0.95rem;">NTT Groups Subsidiary</p>
+                    </div>
+                    <div style="padding: 0 1rem;">
+                        <ul style="list-style: none; padding: 0; color: #333;">
+                            <li style="padding: 0.75rem 0; border-bottom: 1px solid #e0e0e0;">
+                                <strong style="color: var(--primary);">• Network:</strong> 65+ countries
+                            </li>
+                            <li style="padding: 0.75rem 0; border-bottom: 1px solid #e0e0e0;">
+                                <strong style="color: var(--primary);">• Fund Required:</strong> SAR 33M
+                            </li>
+                            <li style="padding: 0.75rem 0; border-bottom: 1px solid #e0e0e0;">
+                                <strong style="color: var(--primary);">• Shares:</strong> 10 Million @ SAR 1.00
+                            </li>
+                            <li style="padding: 0.75rem 0; border-bottom: 1px solid #e0e0e0;">
+                                <strong style="color: var(--primary);">• Market Share:</strong> 30%
+                            </li>
+                            <li style="padding: 0.75rem 0;">
+                                <strong style="color: var(--primary);">• Expected ROI:</strong> 
+                                <span style="color: #27ae60; font-weight: bold; font-size: 1.2rem;">400%</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card" style="background: rgba(255,255,255,0.95); min-height: 450px;">
+                    <div style="background: linear-gradient(135deg, #e74c3c, #f39c12); padding: 1.5rem; margin: -2rem -2rem 1.5rem -2rem; border-radius: 20px 20px 0 0;">
+                        <h3 style="color: white; text-align: center; margin: 0;">Virtual Education (eEDU)</h3>
+                        <p style="color: rgba(255,255,255,0.9); text-align: center; margin-top: 0.5rem; font-size: 0.95rem;">Digital Learning Platform</p>
+                    </div>
+                    <div style="padding: 0 1rem;">
+                        <ul style="list-style: none; padding: 0; color: #333;">
+                            <li style="padding: 0.75rem 0; border-bottom: 1px solid #e0e0e0;">
+                                <strong style="color: var(--primary);">• Fund Required:</strong> SAR 40M
+                            </li>
+                            <li style="padding: 0.75rem 0; border-bottom: 1px solid #e0e0e0;">
+                                <strong style="color: var(--primary);">• Shares:</strong> 15 Million @ SAR 1.00
+                            </li>
+                            <li style="padding: 0.75rem 0; border-bottom: 1px solid #e0e0e0;">
+                                <strong style="color: var(--primary);">• Market Share:</strong> 37%
+                            </li>
+                            <li style="padding: 0.75rem 0; border-bottom: 1px solid #e0e0e0;">
+                                <strong style="color: var(--primary);">• Payback:</strong> 7 years
+                            </li>
+                            <li style="padding: 0.75rem 0;">
+                                <strong style="color: var(--primary);">• Expected ROI:</strong> 
+                                <span style="color: #27ae60; font-weight: bold; font-size: 1.2rem;">400%</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card" style="background: rgba(255,255,255,0.95); min-height: 450px;">
+                    <div style="background: linear-gradient(135deg, #9b59b6, #8e44ad); padding: 1.5rem; margin: -2rem -2rem 1.5rem -2rem; border-radius: 20px 20px 0 0;">
+                        <h3 style="color: white; text-align: center; margin: 0;">Remote Back Office (RBRS)</h3>
+                        <p style="color: rgba(255,255,255,0.9); text-align: center; margin-top: 0.5rem; font-size: 0.95rem;">Business Process Solutions</p>
+                    </div>
+                    <div style="padding: 0 1rem;">
+                        <ul style="list-style: none; padding: 0; color: #333;">
+                            <li style="padding: 0.75rem 0; border-bottom: 1px solid #e0e0e0;">
+                                <strong style="color: var(--primary);">• Fund Required:</strong> SAR 40M
+                            </li>
+                            <li style="padding: 0.75rem 0; border-bottom: 1px solid #e0e0e0;">
+                                <strong style="color: var(--primary);">• Shares:</strong> 15 Million @ SAR 1.00
+                            </li>
+                            <li style="padding: 0.75rem 0; border-bottom: 1px solid #e0e0e0;">
+                                <strong style="color: var(--primary);">• Market Share:</strong> 37%
+                            </li>
+                            <li style="padding: 0.75rem 0; border-bottom: 1px solid #e0e0e0;">
+                                <strong style="color: var(--primary);">• Payback:</strong> 7 years
+                            </li>
+                            <li style="padding: 0.75rem 0;">
+                                <strong style="color: var(--primary);">• Expected ROI:</strong> 
+                                <span style="color: #27ae60; font-weight: bold; font-size: 1.2rem;">400%</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <p style="font-size: 1.2rem; margin-bottom: 1.5rem;">Join us in building the future of digital transformation</p>
+                <button class="btn btn-warning" onclick="showPage('investment')">Explore Investment Options</button>
+            </div>
+        </section>
+
+        <section class="section" style="background: var(--gray);">
+            <h2 class="section-title">Our Service Portfolio</h2>
+            <p class="section-subtitle">Comprehensive solutions across six strategic sectors</p>
+            <div style="max-width: 1100px; margin: 0 auto;">
+                
+                <div class="cards-grid" style="margin-bottom: 3rem;">
+                    <div class="card" style="border-left: 5px solid #3498db;">
+                        <div style="font-size: 2.5rem; margin-bottom: 1rem;">📡</div>
+                        <h3 style="color: var(--primary); margin-bottom: 1rem;">Telecom Infrastructure</h3>
+                        <ul style="list-style: none; padding: 0; color: #666;">
+                            <li style="padding: 0.5rem 0;">✓ 5G Network Deployment</li>
+                            <li style="padding: 0.5rem 0;">✓ Fiber Optics Installation</li>
+                            <li style="padding: 0.5rem 0;">✓ Network Optimization Solutions</li>
+                            <li style="padding: 0.5rem 0;">✓ Tower Infrastructure Development</li>
+                            <li style="padding: 0.5rem 0;">✓ 24/7 Maintenance Services</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card" style="border-left: 5px solid #2ecc71;">
+                        <div style="font-size: 2.5rem; margin-bottom: 1rem;">🏗️</div>
+                        <h3 style="color: var(--primary); margin-bottom: 1rem;">Construction & Engineering</h3>
+                        <ul style="list-style: none; padding: 0; color: #666;">
+                            <li style="padding: 0.5rem 0;">✓ Smart Building Development</li>
+                            <li style="padding: 0.5rem 0;">✓ Infrastructure Projects</li>
+                            <li style="padding: 0.5rem 0;">✓ MEP Services (Mechanical, Electrical, Plumbing)</li>
+                            <li style="padding: 0.5rem 0;">✓ Project Management</li>
+                            <li style="padding: 0.5rem 0;">✓ Quality Assurance & Control</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card" style="border-left: 5px solid #9b59b6;">
+                        <div style="font-size: 2.5rem; margin-bottom: 1rem;">🏙️</div>
+                        <h3 style="color: var(--primary); margin-bottom: 1rem;">Smart Cities Solutions</h3>
+                        <ul style="list-style: none; padding: 0; color: #666;">
+                            <li style="padding: 0.5rem 0;">✓ IoT Implementation</li>
+                            <li style="padding: 0.5rem 0;">✓ Urban Planning Consultation</li>
+                            <li style="padding: 0.5rem 0;">✓ Digital Infrastructure</li>
+                            <li style="padding: 0.5rem 0;">✓ Smart Utilities Management</li>
+                            <li style="padding: 0.5rem 0;">✓ Traffic Management Systems</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card" style="border-left: 5px solid #e74c3c;">
+                        <div style="font-size: 2.5rem; margin-bottom: 1rem;">💻</div>
+                        <h3 style="color: var(--primary); margin-bottom: 1rem;">IT/SaaS Solutions</h3>
+                        <ul style="list-style: none; padding: 0; color: #666;">
+                            <li style="padding: 0.5rem 0;">✓ Enterprise Software Development</li>
+                            <li style="padding: 0.5rem 0;">✓ Cloud Services & Migration</li>
+                            <li style="padding: 0.5rem 0;">✓ Digital Transformation Consulting</li>
+                            <li style="padding: 0.5rem 0;">✓ Cybersecurity Solutions</li>
+                            <li style="padding: 0.5rem 0;">✓ Custom Application Development</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card" style="border-left: 5px solid #27ae60;">
+                        <div style="font-size: 2.5rem; margin-bottom: 1rem;">🌿</div>
+                        <h3 style="color: var(--primary); margin-bottom: 1rem;">Halal Food Processing</h3>
+                        <ul style="list-style: none; padding: 0; color: #666;">
+                            <li style="padding: 0.5rem 0;">✓ Halal Certification Services</li>
+                            <li style="padding: 0.5rem 0;">✓ Processing Facility Setup</li>
+                            <li style="padding: 0.5rem 0;">✓ Export Facilitation</li>
+                            <li style="padding: 0.5rem 0;">✓ Quality Control Systems</li>
+                            <li style="padding: 0.5rem 0;">✓ Supply Chain Management</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card" style="border-left: 5px solid #f39c12;">
+                        <div style="font-size: 2.5rem; margin-bottom: 1rem;">🔧</div>
+                        <h3 style="color: var(--primary); margin-bottom: 1rem;">Technical Services</h3>
+                        <ul style="list-style: none; padding: 0; color: #666;">
+                            <li style="padding: 0.5rem 0;">✓ Facility Management</li>
+                            <li style="padding: 0.5rem 0;">✓ Maintenance Contracts</li>
+                            <li style="padding: 0.5rem 0;">✓ Technical Consulting</li>
+                            <li style="padding: 0.5rem 0;">✓ System Integration</li>
+                            <li style="padding: 0.5rem 0;">✓ Professional Training Programs</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div style="background: white; padding: 2.5rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); margin-bottom: 3rem;">
+                    <h3 style="color: var(--primary); text-align: center; margin-bottom: 2rem;">Our Track Record</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem;">
+                        <div style="text-align: center;">
+                            <div style="font-size: 2.5rem; font-weight: bold; color: var(--secondary);">150+</div>
+                            <div style="color: #666; margin-top: 0.5rem;">Completed Projects</div>
+                        </div>
+                        <div style="text-align: center;">
+                            <div style="font-size: 2.5rem; font-weight: bold; color: #2ecc71;">500+</div>
+                            <div style="color: #666; margin-top: 0.5rem;">Enterprise Clients</div>
+                        </div>
+                        <div style="text-align: center;">
+                            <div style="font-size: 2.5rem; font-weight: bold; color: #e74c3c;">95%</div>
+                            <div style="color: #666; margin-top: 0.5rem;">Client Retention Rate</div>
+                        </div>
+                        <div style="text-align: center;">
+                            <div style="font-size: 2.5rem; font-weight: bold; color: #f39c12;">18+</div>
+                            <div style="color: #666; margin-top: 0.5rem;">Years in Saudi Arabia</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="background: linear-gradient(135deg, var(--primary), var(--secondary)); padding: 2rem; border-radius: 15px; color: white; text-align: center;">
+                    <h3 style="margin-bottom: 1.5rem;">Approved Contractor & Partner</h3>
+                    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; margin-bottom: 2rem;">
+                        <span style="background: rgba(255,255,255,0.2); padding: 0.5rem 1rem; border-radius: 20px;">ARAMCO</span>
+                        <span style="background: rgba(255,255,255,0.2); padding: 0.5rem 1rem; border-radius: 20px;">STC</span>
+                        <span style="background: rgba(255,255,255,0.2); padding: 0.5rem 1rem; border-radius: 20px;">Mobily</span>
+                        <span style="background: rgba(255,255,255,0.2); padding: 0.5rem 1rem; border-radius: 20px;">SABIC</span>
+                        <span style="background: rgba(255,255,255,0.2); padding: 0.5rem 1rem; border-radius: 20px;">Etihad Etisalat</span>
+                        <span style="background: rgba(255,255,255,0.2); padding: 0.5rem 1rem; border-radius: 20px;">Saudi Binladin</span>
+                        <span style="background: rgba(255,255,255,0.2); padding: 0.5rem 1rem; border-radius: 20px;">Ericsson</span>
+                        <span style="background: rgba(255,255,255,0.2); padding: 0.5rem 1rem; border-radius: 20px;">Nokia</span>
+                        <span style="background: rgba(255,255,255,0.2); padding: 0.5rem 1rem; border-radius: 20px;">Wipro</span>
+                        <span style="background: rgba(255,255,255,0.2); padding: 0.5rem 1rem; border-radius: 20px;">CISCO</span>
+                        <span style="background: rgba(255,255,255,0.2); padding: 0.5rem 1rem; border-radius: 20px;">L&T</span>
+                        <span style="background: rgba(255,255,255,0.2); padding: 0.5rem 1rem; border-radius: 20px;">MMG</span>
+                    </div>
+                    <button class="btn btn-warning" onclick="showPage('contact')">Partner With Us</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Page 5: Technology -->
+    <div id="technology" class="page">
+        <section class="section">
+            <h2 class="section-title">Technology Portfolio</h2>
+            <p class="section-subtitle">17 market-ready products valued at SAR 150 Million</p>
+
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <div class="tech-icon">📱</div>
+                    <h3>Mobile Applications</h3>
+                    <p>Consumer and enterprise mobile solutions</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">🌐</div>
+                    <h3>Web Platforms</h3>
+                    <p>SaaS and cloud-based platforms</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">🤖</div>
+                    <h3>AI Solutions</h3>
+                    <p>Machine learning and automation tools</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">🔒</div>
+                    <h3>Cybersecurity</h3>
+                    <p>Security solutions for enterprises</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">📊</div>
+                    <h3>Analytics</h3>
+                    <p>Business intelligence and data analytics</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">☁️</div>
+                    <h3>Cloud Services</h3>
+                    <p>Infrastructure and platform services</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" style="background: var(--gray);">
+            <h2 class="section-title">Product Highlights</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #667eea, #764ba2); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">🚀</div>
+                    <h3>Launch Ready</h3>
+                    <p>All 17 products are 100% developed, tested, and ready for immediate commercial deployment</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #f093fb, #f5576c); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">💡</div>
+                    <h3>Innovation Focused</h3>
+                    <p>Cutting-edge technologies aligned with Saudi Vision 2030 digital transformation goals</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #4facfe, #00f2fe); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">📈</div>
+                    <h3>High Growth</h3>
+                    <p>Technology sector offers 20X higher returns compared to traditional business models</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #43e97b, #38f9d7); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">🌍</div>
+                    <h3>Global Scalability</h3>
+                    <p>Products designed for international markets with multi-language and multi-currency support</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #fa709a, #fee140); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">🔗</div>
+                    <h3>Integration Ready</h3>
+                    <p>Seamless integration with existing enterprise systems and third-party services</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #30cfd0, #330867); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">🛡️</div>
+                    <h3>IP Protected</h3>
+                    <p>Full intellectual property rights and patents secured for all products</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Featured Digital Platforms</h2>
+            <p class="section-subtitle">Strategic digital solutions founded by Eng. Mohammad Shakil</p>
+            
+            <div class="cards-grid">
+                <div class="card" style="border-top: 5px solid #3498db;">
+                    <h3 style="color: var(--primary);">Site Monitoring Platform</h3>
+                    <p style="margin: 1rem 0;">Real-time infrastructure and project monitoring solution</p>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: 0.5rem 0;">✓ IoT-enabled monitoring</li>
+                        <li style="padding: 0.5rem 0;">✓ AI-powered analytics</li>
+                        <li style="padding: 0.5rem 0;">✓ Enterprise-grade security</li>
+                    </ul>
+                </div>
+                
+                <div class="card" style="border-top: 5px solid #e74c3c;">
+                    <h3 style="color: var(--primary);">Vivid Verse Global (VVG)</h3>
+                    <p style="margin: 1rem 0;">Digital content and media distribution platform</p>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: 0.5rem 0;">✓ Global content delivery</li>
+                        <li style="padding: 0.5rem 0;">✓ Multi-format support</li>
+                        <li style="padding: 0.5rem 0;">✓ Blockchain integration</li>
+                    </ul>
+                </div>
+                
+                <div class="card" style="border-top: 5px solid #2ecc71;">
+                    <h3 style="color: var(--primary);">ZARS Global</h3>
+                    <p style="margin: 1rem 0;">International trade and commerce platform</p>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: 0.5rem 0;">✓ B2B marketplace</li>
+                        <li style="padding: 0.5rem 0;">✓ Trade finance solutions</li>
+                        <li style="padding: 0.5rem 0;">✓ Supply chain management</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" style="background: var(--gray);">
+            <h2 class="section-title">Virtual Office (eOFF)</h2>
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div class="card" style="padding: 3rem;">
+                    <h3 style="text-align: center; color: var(--primary); margin-bottom: 2rem;">Complete Virtual Office Solution</h3>
+                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem;">
+                        <div>
+                            <h4 style="color: var(--accent); margin-bottom: 1rem;">Investment Details</h4>
+                            <ul style="list-style: none; padding: 0;">
+                                <li style="padding: 0.5rem 0;">• Fund Required: SAR 2M</li>
+                                <li style="padding: 0.5rem 0;">• Shares: 500,000</li>
+                                <li style="padding: 0.5rem 0;">• Price: SAR 1.00 each</li>
+                                <li style="padding: 0.5rem 0;">• Market Share: 25%</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 style="color: var(--accent); margin-bottom: 1rem;">Features</h4>
+                            <ul style="list-style: none; padding: 0;">
+                                <li style="padding: 0.5rem 0;">• Cloud-based platform</li>
+                                <li style="padding: 0.5rem 0;">• Monthly subscriptions</li>
+                                <li style="padding: 0.5rem 0;">• Scalable solution</li>
+                                <li style="padding: 0.5rem 0;">• 400% Expected ROI</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Page 6: FAQ -->
+    <div id="faq" class="page">
+        <section class="section">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <p class="section-subtitle">Everything you need to know about investing in NTT Groups KSA</p>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        Why should I invest SAR 2M in NTT Groups KSA?
+                    </div>
+                    <div class="faq-answer">
+                        <p>You get 21-22% equity in a professionally valued SAR 14M company (UK verified), access to 25% share (SAR 3.75M) from SAR 15M receivables collection, leadership by Eng. Mohammad Shakil with proven track record of SAR 21.6B project management at THALES, 34 years of global experience with 18+ years in Saudi Arabia, and returns 20X higher than traditional business investments. The company also has SAR 400M in subcontracting business with 9-10% guaranteed profit and ROI within 2 years.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        What makes NTT Groups KSA different from other investment opportunities?
+                    </div>
+                    <div class="faq-answer">
+                        <p>We are approved contractors for world-recognized companies like ARAMCO, STC, Mobily, SABIC, and others. We have 17 technology products (IT, App & Platform) worth SAR 150M that are 100% ready for commercial launch. Our unique combination of traditional business (SAR 400M subcontracting) and cutting-edge technology portfolio provides diversified revenue streams.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        How secure is my investment?
+                    </div>
+                    <div class="faq-answer">
+                        <p>Your investment is backed by: Professional UK entity valuation (January 2024), SAR 15M in confirmed receivables (25% for immediate business use, 75% for settling obligations), SAR 50M+ annual turnover with established operations, approved contractor status with major corporations, and a diversified portfolio across multiple sectors. Additionally, we've successfully reduced liabilities from SAR 3M to SAR 2M (33% reduction).</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        What is the expected timeline for returns?
+                    </div>
+                    <div class="faq-answer">
+                        <p>Immediate returns start with access to 25% share (SAR 3.75M) from SAR 15M receivables collection. Year 2: 50% ROI, Year 4: 200% ROI, Year 6: 300% ROI, Year 7: 400% ROI. The subcontracting business (SAR 400M) provides 9-10% net profit with ROI achievable within 2 years. Technology products can generate revenue immediately as they're 100% ready for launch.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        Why is the equity offering 21-22% for SAR 2M?
+                    </div>
+                    <div class="faq-answer">
+                        <p>The actual calculation is 14.28% (SAR 2M ÷ SAR 14M valuation), but we're offering an additional 7-8% bonus equity due to urgent funding requirements. This is significantly better than our previous offer where SAR 7M would have gotten 50% equity. You're essentially getting this opportunity at a 70% discount.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        What are my exit options?
+                    </div>
+                    <div class="faq-answer">
+                        <p>Multiple exit strategies are available after a minimum investment period of 2 years with 3 months advance notice: IPO planned for 2030 offering potential for significant capital gains, buyback options after specific milestones, secondary sale to other investors at market valuation, merger and acquisition opportunities, or maintain equity for long-term passive income through quarterly profit distributions.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        How can I verify your credentials?
+                    </div>
+                    <div class="faq-answer">
+                        <p>We provide full transparency through: UK valuation report (January 2024), audited financial statements, client contracts and testimonials, government approvals and licenses, site visits to our operations, meetings with our leadership team, and due diligence documentation. Serious investors receive complete access to all verification materials.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        What about the technology portfolio?
+                    </div>
+                    <div class="faq-answer">
+                        <p>We have 17 products (IT, App & Platform) valued at SAR 150M that are 100% complete and ready for commercial launch. These aren't concepts or prototypes - they're fully developed, tested, and market-ready solutions that can generate immediate revenue upon deployment.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Page 7: Contact -->
+    <div id="contact" class="page">
+        <section class="section">
+            <h2 class="section-title">Start Your Investment Journey</h2>
+            <p class="section-subtitle">Join us in building the future of multi-sector business in the Middle East</p>
+
+            <div class="contact-form">
+                <h3 style="text-align: center; color: var(--primary); margin-bottom: 2rem;">Investment Inquiry Form</h3>
+                <form onsubmit="handleSubmit(event)">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label class="form-label">Full Name *</label>
+                            <input type="text" class="form-input" required placeholder="Enter your full name">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Email Address *</label>
+                            <input type="email" class="form-input" required placeholder="your.email@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Phone Number *</label>
+                            <input type="tel" class="form-input" required placeholder="+966 XX XXX XXXX">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Company Name</label>
+                            <input type="text" class="form-input" placeholder="Your company name">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Investment Interest *</label>
+                            <select class="form-select" required>
+                                <option value="">Select Investment Type</option>
+                                <option value="strategic">Strategic Partner (SAR 2M)</option>
+                                <option value="equity-flexible">Equity Partner - Flexible Investment</option>
+                                <option value="franchise">Franchise Partner (SAR 500K+)</option>
+                                <option value="shares">Share Purchase</option>
+                                <option value="project">Project Partner</option>
+                                <option value="technology">Technology Investment</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Investment Amount</label>
+                            <input type="text" class="form-input" placeholder="SAR Amount">
+                        </div>
+                        <div class="form-group full">
+                            <label class="form-label">Message</label>
+                            <textarea class="form-textarea" placeholder="Tell us about your investment goals and interests"></textarea>
+                        </div>
+                    </div>
+                    <div style="text-align: center; margin-top: 2rem;">
+                        <button type="submit" class="btn btn-success">Submit Investment Inquiry</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section class="section" style="background: var(--gray);">
+            <h2 class="section-title">Our Offices</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">📍</div>
+                    <h3>Saudi Arabia Office</h3>
+                    <p><strong>Riyadh, Kingdom of Saudi Arabia</strong></p>
+                    <p>18+ Years of Operations</p>
+                    <p>Vision 2030 Aligned</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🌐</div>
+                    <h3>Global Headquarters</h3>
+                    <p><strong>New Delhi, India</strong></p>
+                    <p>34 Years of Excellence</p>
+                    <p>22 Country Coordination</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🇬🇧</div>
+                    <h3>UK Office</h3>
+                    <p><strong>London, United Kingdom</strong></p>
+                    <p>European Operations Hub</p>
+                    <p>International Partnerships</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>NTT Groups KSA</h3>
+                <p>Professional Valuation: SAR 14 Million<br>
+                Investment Opportunity: SAR 2 Million<br>
+                Equity Offering: 21-22%<br>
+                Annual Turnover: SAR 50M+<br>
+                Exit: Min 2 Years + 3 Months Notice</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#" onclick="showPage('home')">Home</a></li>
+                    <li><a href="#" onclick="showPage('about')">About Us</a></li>
+                    <li><a href="#" onclick="showPage('investment')">Investment</a></li>
+                    <li><a href="#" onclick="showPage('portfolio')">Portfolio</a></li>
+                    <li><a href="#" onclick="showPage('technology')">Technology</a></li>
+                    <li><a href="#" onclick="showPage('faq')">FAQ</a></li>
+                    <li><a href="#" onclick="showPage('contact')">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="#">About NTT Groups</a></li>
+                    <li><a href="https://www.mshakil.info/" target="_blank">CEO - Eng. Mohammad Shakil</a></li>
+                    <li><a href="#">UK SPA Document</a></li>
+                    <li><a href="#">Legal Documents</a></li>
+                    <li><a href="#">Investment Deck</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Key Highlights</h3>
+                <p>✓ 34 Years Global Experience<br>
+                ✓ 18+ Years in Saudi Arabia<br>
+                ✓ SAR 50M+ Annual Turnover<br>
+                ✓ SAR 400M Subcontracting Business<br>
+                ✓ SAR 150M Technology Portfolio<br>
+                ✓ 17 Products 100% Ready<br>
+                ✓ Approved Contractor Status</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 NTT Groups KSA. All rights reserved. | Led by Eng. Mohammad Shakil, Group CEO & Vice Chairman</p>
+            <p style="font-size: 0.9rem; opacity: 0.8; margin-top: 0.5rem;">Professional Valuation: SAR 14 Million | Investment Opportunity: SAR 2 Million</p>
+        </div>
+    </footer>
+
+    <script>
+        // Page navigation
+        function showPage(pageId) {
+            // Hide all pages
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => page.classList.remove('active'));
+            
+            // Show selected page
+            document.getElementById(pageId).classList.add('active');
+            
+            // Update nav links
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => link.classList.remove('active'));
+            
+            // Find and activate the corresponding nav link
+            navLinks.forEach(link => {
+                if (link.getAttribute('onclick') === `showPage('${pageId}')`) {
+                    link.classList.add('active');
+                }
+            });
+            
+            // Close mobile menu if open
+            document.querySelector('.nav-menu').classList.remove('active');
+            document.querySelector('.mobile-menu').classList.remove('active');
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+
+        // Dropdown toggle
+        function toggleDropdown(event) {
+            event.preventDefault();
+            const dropdown = event.target.closest('.dropdown');
+            dropdown.classList.toggle('active');
+            
+            // Close other dropdowns
+            document.querySelectorAll('.dropdown').forEach(d => {
+                if (d !== dropdown) {
+                    d.classList.remove('active');
+                }
+            });
+        }
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!event.target.closest('.dropdown')) {
+                document.querySelectorAll('.dropdown').forEach(d => {
+                    d.classList.remove('active');
+                });
+            }
+        });
+
+        // Form submission
+        function handleSubmit(event) {
+            event.preventDefault();
+            alert('Thank you for your investment inquiry!\n\nOur team will contact you within 24 hours to discuss your partnership opportunity.\n\nYou will receive:\n• Detailed investment deck\n• UK valuation report\n• Financial projections\n• Partnership terms\n• Access to due diligence materials');
+            event.target.reset();
+        }
+
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const navMenu = document.querySelector('.nav-menu');
+            navMenu.classList.toggle('active');
+            
+            // Animate hamburger menu
+            const mobileMenu = document.querySelector('.mobile-menu');
+            mobileMenu.classList.toggle('active');
+        }
+
+        // FAQ toggle
+        function toggleFAQ(element) {
+            const faqItem = element.parentElement;
+            const allItems = document.querySelectorAll('.faq-item');
+            
+            // Close all other FAQs
+            allItems.forEach(item => {
+                if (item !== faqItem) {
+                    item.classList.remove('active');
+                }
+            });
+            
+            // Toggle current FAQ
+            faqItem.classList.toggle('active');
+        }
+
+        // Equity Partner Calculator Functions
+        let currentCurrency = 'SAR';
+        const companyValuation = 14000000; // SAR 14M
+        const expectedROI = 0.15; // 15% annual ROI
+        const usdToSar = 3.75; // Exchange rate
+
+        function toggleCurrency(currency) {
+            currentCurrency = currency;
+            document.getElementById('sarBtn').classList.toggle('active', currency === 'SAR');
+            document.getElementById('usdBtn').classList.toggle('active', currency === 'USD');
+            document.getElementById('currencySymbol').textContent = currency;
+            
+            // Update input placeholder
+            const input = document.getElementById('investmentAmount');
+            if (input.value) {
+                if (currency === 'USD') {
+                    input.value = Math.round(parseFloat(input.value) / usdToSar);
+                } else {
+                    input.value = Math.round(parseFloat(input.value) * usdToSar);
+                }
+            }
+            
+            calculateEquity();
+        }
+
+        function updateFromSlider() {
+            const slider = document.getElementById('investmentSlider');
+            const input = document.getElementById('investmentAmount');
+            let value = parseFloat(slider.value);
+            
+            if (currentCurrency === 'USD') {
+                value = value / usdToSar;
+            }
+            
+            input.value = Math.round(value);
+            calculateEquity();
+        }
+
+        function calculateEquity() {
+            const inputAmount = document.getElementById('investmentAmount').value;
+            if (!inputAmount || inputAmount <= 0) {
+                resetResults();
+                return;
+            }
+            
+            let investmentSAR = parseFloat(inputAmount);
+            if (currentCurrency === 'USD') {
+                investmentSAR = investmentSAR * usdToSar;
+            }
+            
+            // Update slider position
+            document.getElementById('investmentSlider').value = investmentSAR;
+            
+            // Calculate equity percentage
+            const equityPercentage = (investmentSAR / companyValuation) * 100;
+            
+            // Calculate returns
+            const annualReturn = investmentSAR * expectedROI;
+            const fiveYearReturn = investmentSAR * (Math.pow(1 + expectedROI, 5) - 1);
+            
+            // Update results
+            document.getElementById('equityPercentage').textContent = equityPercentage.toFixed(2) + '%';
+            
+            const currencyPrefix = currentCurrency === 'SAR' ? 'SAR ' : '$';
+            document.getElementById('annualReturn').textContent = currencyPrefix + formatNumber(currentCurrency === 'USD' ? annualReturn / usdToSar : annualReturn);
+            document.getElementById('fiveYearReturn').textContent = currencyPrefix + formatNumber(currentCurrency === 'USD' ? fiveYearReturn / usdToSar : fiveYearReturn);
+            
+            // Update chart
+            drawEquityChart(equityPercentage);
+            
+            // Update legend
+            document.getElementById('yourEquityLegend').textContent = equityPercentage.toFixed(2) + '%';
+            document.getElementById('othersEquityLegend').textContent = (100 - equityPercentage).toFixed(2) + '%';
+        }
+
+        function formatNumber(num) {
+            if (num >= 1000000) {
+                return (num / 1000000).toFixed(2) + 'M';
+            } else if (num >= 1000) {
+                return (num / 1000).toFixed(0) + 'K';
+            }
+            return num.toFixed(0);
+        }
+
+        function drawEquityChart(equityPercentage) {
+            const canvas = document.getElementById('equityChart');
+            if (!canvas) return;
+            
+            const ctx = canvas.getContext('2d');
+            const centerX = canvas.width / 2;
+            const centerY = canvas.height / 2;
+            const radius = 80;
+            
+            // Clear canvas
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            // Draw your equity portion
+            const yourAngle = (equityPercentage / 100) * 2 * Math.PI;
+            ctx.beginPath();
+            ctx.arc(centerX, centerY, radius, -Math.PI/2, -Math.PI/2 + yourAngle);
+            ctx.lineTo(centerX, centerY);
+            ctx.fillStyle = '#2ecc71';
+            ctx.fill();
+            
+            // Draw others' equity portion
+            ctx.beginPath();
+            ctx.arc(centerX, centerY, radius, -Math.PI/2 + yourAngle, -Math.PI/2 + 2 * Math.PI);
+            ctx.lineTo(centerX, centerY);
+            ctx.fillStyle = '#34495e';
+            ctx.fill();
+            
+            // Draw white circle in center
+            ctx.beginPath();
+            ctx.arc(centerX, centerY, radius * 0.6, 0, 2 * Math.PI);
+            ctx.fillStyle = 'white';
+            ctx.fill();
+            
+            // Draw percentage text
+            ctx.font = 'bold 24px system-ui';
+            ctx.fillStyle = '#2ecc71';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText(equityPercentage.toFixed(1) + '%', centerX, centerY);
+        }
+
+        function resetResults() {
+            document.getElementById('equityPercentage').textContent = '0%';
+            document.getElementById('annualReturn').textContent = '0';
+            document.getElementById('fiveYearReturn').textContent = '0';
+            document.getElementById('yourEquityLegend').textContent = '0%';
+            document.getElementById('othersEquityLegend').textContent = '100%';
+            
+            const canvas = document.getElementById('equityChart');
+            if (canvas) {
+                const ctx = canvas.getContext('2d');
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+            }
+        }
+
+        function proceedWithEquityPartner() {
+            const investmentAmount = document.getElementById('investmentAmount').value;
+            if (!investmentAmount || investmentAmount <= 0) {
+                alert('Please enter your investment amount to proceed.');
+                return;
+            }
+            
+            const equityPercentage = document.getElementById('equityPercentage').textContent;
+            const message = `Thank you for your interest in the Equity Partner Investment Model!\n\nYour Selected Investment: ${currentCurrency} ${formatNumber(investmentAmount)}\nEquity Stake: ${equityPercentage}\n\nOur investment team will contact you within 24 hours with:\n• Customized partnership agreement\n• Detailed financial projections\n• Due diligence materials\n• Next steps for onboarding`;
+            
+            alert(message);
+            showPage('contact');
+        }
+
+        // Initialize chart on page load
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                const canvas = document.getElementById('equityChart');
+                if (canvas) {
+                    drawEquityChart(0);
+                }
+            }, 100);
+        });
+    </script>
+</body>
+</html>
