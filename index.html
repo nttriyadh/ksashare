@@ -4,6 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NTT Groups KSA - Investment Opportunity | SAR 14M Valued Company</title>
+    
+    <!-- 
+    ==========================================
+    ✅ NTT LOGO IMPLEMENTED WITH GOOGLE DOCS LINK
+    ==========================================
+    The website now displays your actual NTT logo using the Google Docs direct link:
+    https://docs.google.com/uc?export=download&id=1xKtt3P9qkpfF49bxqCMaBh5DyvY87uJv
+    
+    Logo appears in 3 locations:
+    - Header navigation (50px height)
+    - Hero section (80px height)
+    - Footer (60px height)
+    
+    FALLBACK SYSTEM:
+    If the Google Docs link fails to load, a styled "NTT" text logo
+    with your brand colors (orange/purple gradient) will appear automatically.
+    
+    TO UPDATE THE LOGO:
+    1. Upload a new logo to Google Drive
+    2. Get the new sharing link
+    3. Convert to direct link format: 
+       https://docs.google.com/uc?export=download&id=[FILE_ID]
+    4. Replace the URL in all 3 img src attributes
+    
+    ALTERNATIVE HOSTING:
+    For better reliability, consider uploading to:
+    - ImgBB (https://imgbb.com) - Most reliable
+    - Cloudinary (https://cloudinary.com) - Professional CDN
+    - Your own web server
+    ==========================================
+    -->
+    
     <style>
         * {
             margin: 0;
@@ -12,9 +44,9 @@
         }
 
         :root {
-            --primary: #1a237e;
-            --primary-color: #1a237e;
-            --secondary: #3498db;
+            --primary: #4b0082;        /* Purple from NTT logo */
+            --primary-color: #4b0082;
+            --secondary: #ff8c00;       /* Orange from NTT logo */
             --accent: #2ecc71;
             --warning: #f39c12;
             --danger: #e74c3c;
@@ -52,24 +84,48 @@
 
         .logo {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            gap: 1rem;
             text-decoration: none;
             color: var(--light);
             font-size: 1.5rem;
             font-weight: bold;
         }
 
+        .logo-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo-img {
+            height: 50px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .logo-text {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--light);
+            white-space: nowrap;
+            letter-spacing: 0.5px;
+        }
+
+        /* Fallback logo icon when image doesn't load */
         .logo-icon {
             width: 50px;
             height: 50px;
-            background: var(--light);
-            color: var(--primary);
-            border-radius: 10px;
+            background: linear-gradient(135deg, #ff8c00, #4b0082);
+            color: white;
+            border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
             font-weight: bold;
+            font-size: 1rem;
+            letter-spacing: 1px;
         }
 
         .nav-menu {
@@ -211,7 +267,7 @@
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #1a237e, #3498db);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
             color: var(--light);
             padding: 5rem 2rem;
             text-align: center;
@@ -697,6 +753,143 @@
             color: var(--secondary);
         }
 
+        /* Evolution Timeline - Enhanced Design */
+        .evolution-timeline {
+            position: relative;
+            padding: 3rem 0;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .timeline-line {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(180deg, var(--primary), var(--secondary), var(--primary));
+            transform: translateX(-50%);
+        }
+
+        .evolution-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 3rem;
+            position: relative;
+            animation: fadeInLeft 0.8s ease-out forwards;
+            opacity: 0;
+        }
+
+        .evolution-item.right {
+            flex-direction: row-reverse;
+            animation: fadeInRight 0.8s ease-out forwards;
+        }
+
+        .evolution-year {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--light);
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            font-weight: bold;
+            color: var(--primary);
+            border: 3px solid var(--primary);
+            z-index: 2;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .evolution-content {
+            background: var(--light);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            width: 45%;
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .evolution-content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .evolution-item.right .evolution-content {
+            margin-left: auto;
+        }
+
+        .evolution-content::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 20px;
+            height: 20px;
+            background: var(--light);
+            border: 3px solid var(--secondary);
+            border-radius: 50%;
+            transform: translateY(-50%);
+        }
+
+        .evolution-item .evolution-content::before {
+            right: -10px;
+        }
+
+        .evolution-item.right .evolution-content::before {
+            left: -10px;
+            right: auto;
+        }
+
+        .evolution-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        }
+
+        .evolution-content h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+
+        .evolution-content p {
+            color: #666;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .evolution-content.future {
+            border: 2px dashed var(--secondary);
+            background: linear-gradient(135deg, rgba(255,140,0,0.05), rgba(75,0,130,0.05));
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
         /* Badge */
         .badge {
             display: inline-block;
@@ -1024,6 +1217,29 @@
             font-size: 1rem;
         }
 
+
+/* Technical Support Card */
+        .technical-support-card {
+            max-width: 1000px;
+            margin: 3rem auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+        }
+
+        .technical-support-card a:hover {
+            color: #1e3a8a !important;
+            text-decoration: underline !important;
+        }
+
+        .technical-support-card .office-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+
         /* Footer */
         footer {
             background: linear-gradient(135deg, var(--dark), #34495e);
@@ -1071,18 +1287,65 @@
             border-top: 1px solid rgba(255,255,255,0.1);
         }
 
-        /* Responsive Design */
+        /* Responsive Design - Enhanced Mobile Support */
         @media (max-width: 768px) {
+            /* General Adjustments */
+            body {
+                font-size: 14px;
+            }
+
+            .section {
+                padding: 2rem 1rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .section-subtitle {
+                font-size: 1rem;
+                padding: 0 1rem;
+            }
+
+            /* Hero Section Mobile */
+            .hero {
+                padding: 3rem 1rem;
+            }
+
             .hero h1 {
-                font-size: 2rem;
+                font-size: 1.6rem;
+                line-height: 1.3;
             }
 
-            .cards-grid {
-                grid-template-columns: 1fr;
+            .hero-subtitle {
+                font-size: 1rem;
+                padding: 0 1rem;
             }
 
-            .stats-grid {
+            .hero-stats {
                 grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+
+            .hero-stat {
+                padding: 1rem;
+            }
+
+            .hero-stat-value {
+                font-size: 1.5rem;
+            }
+
+            .hero-stat-label {
+                font-size: 0.8rem;
+            }
+
+            /* Navigation Mobile */
+            header {
+                padding: 0.5rem 0;
+            }
+
+            nav {
+                padding: 0 1rem;
             }
 
             .mobile-menu {
@@ -1094,22 +1357,201 @@
                 left: -100%;
                 top: 60px;
                 flex-direction: column;
-                background: var(--dark);
+                background: linear-gradient(135deg, var(--primary), var(--secondary));
                 width: 100%;
                 text-align: center;
                 transition: 0.3s;
                 box-shadow: 0 10px 27px rgba(0,0,0,0.05);
                 padding: 2rem 0;
+                z-index: 999;
+                max-height: calc(100vh - 60px);
+                overflow-y: auto;
             }
 
             .nav-menu.active {
                 left: 0;
             }
 
-            table {
+            .nav-link {
+                display: block;
+                padding: 1rem;
+                margin: 0.5rem 1rem;
+                border-radius: 10px;
+            }
+
+            .dropdown {
+                position: relative;
+            }
+
+            .dropdown-menu {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                display: none;
+                margin-top: 1rem;
+                background: rgba(255,255,255,0.1);
+            }
+
+            .dropdown.active .dropdown-menu {
+                display: block;
+            }
+
+            .dropdown-item {
+                color: var(--light);
+                padding: 0.8rem;
+            }
+
+            /* Logo Mobile */
+            .logo-container {
+                gap: 0.3rem;
+            }
+
+            .logo-img {
+                height: 40px;
+            }
+
+            .logo-text {
                 font-size: 0.9rem;
             }
 
+            .logo-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 0.9rem;
+            }
+
+            /* Cards and Grids Mobile */
+            .cards-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .card {
+                padding: 1.5rem;
+            }
+
+            .card-icon {
+                font-size: 2.5rem;
+            }
+
+            .card h3 {
+                font-size: 1.2rem;
+            }
+
+            .card-value {
+                font-size: 1.5rem;
+            }
+
+            /* Investment Cards Mobile */
+            .investment-card {
+                margin-bottom: 1.5rem;
+            }
+
+            .investment-header h3 {
+                font-size: 1.2rem;
+            }
+
+            .investment-price {
+                font-size: 2rem;
+                padding: 1.5rem;
+            }
+
+            .investment-features {
+                padding: 1rem;
+            }
+
+            .investment-features li {
+                padding: 0.8rem;
+                padding-left: 1.5rem;
+                font-size: 0.9rem;
+            }
+
+            /* Stats Grid Mobile */
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+
+            .stat-card {
+                padding: 1.5rem 1rem;
+            }
+
+            .stat-value {
+                font-size: 1.8rem;
+            }
+
+            .stat-label {
+                font-size: 0.85rem;
+            }
+
+            /* Tables Mobile */
+            table {
+                font-size: 0.85rem;
+            }
+
+            .data-table {
+                display: block;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+
+            .data-table th,
+            .data-table td {
+                padding: 0.8rem;
+                font-size: 0.85rem;
+            }
+
+            /* Forms Mobile */
+            .contact-form {
+                padding: 2rem 1.5rem;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-group.full {
+                grid-column: span 1;
+            }
+
+            .form-input,
+            .form-select,
+            .form-textarea {
+                font-size: 16px; /* Prevents zoom on iOS */
+                padding: 0.8rem;
+            }
+
+            /* Buttons Mobile */
+            .btn {
+                padding: 0.8rem 1.5rem;
+                font-size: 0.9rem;
+                margin: 0.3rem;
+            }
+
+            /* Portfolio Grid Mobile */
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .portfolio-stats {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 0.5rem;
+            }
+
+            .portfolio-stat {
+                padding: 0.5rem;
+            }
+
+            .portfolio-stat-value {
+                font-size: 1.2rem;
+            }
+
+            .portfolio-stat-label {
+                font-size: 0.75rem;
+            }
+
+            /* Timeline Mobile */
             .timeline-container {
                 flex-direction: column;
                 gap: 1.5rem;
@@ -1124,12 +1566,107 @@
                 max-width: 300px;
             }
 
-            .footer-content {
-                grid-template-columns: 1fr;
-                text-align: center;
+            /* Evolution Timeline Mobile */
+            .evolution-timeline {
+                padding: 2rem 0;
             }
 
-            /* Equity Partner Calculator Mobile Styles */
+            .timeline-line {
+                left: 30px;
+            }
+
+            .evolution-item,
+            .evolution-item.right {
+                flex-direction: row;
+                animation: fadeInUp 0.8s ease-out forwards;
+                margin-bottom: 2rem;
+            }
+
+            .evolution-year {
+                position: relative;
+                left: 0;
+                transform: none;
+                margin-right: 1rem;
+                min-width: 60px;
+                text-align: center;
+                font-size: 0.85rem;
+                padding: 0.3rem 0.5rem;
+            }
+
+            .evolution-content {
+                width: calc(100% - 80px);
+                margin-left: 0 !important;
+                padding: 1.5rem;
+            }
+
+            .evolution-content::before {
+                display: none;
+            }
+
+            .evolution-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 1.2rem;
+            }
+
+            .evolution-content h3 {
+                font-size: 1.1rem;
+            }
+
+            .evolution-content p {
+                font-size: 0.85rem;
+            }
+
+            /* FAQ Mobile */
+            .faq-container {
+                padding: 0 0.5rem;
+            }
+
+            .faq-item {
+                margin-bottom: 1rem;
+            }
+
+            .faq-question {
+                padding: 1rem;
+                font-size: 0.95rem;
+            }
+
+            .faq-answer {
+                padding: 0 1rem;
+                font-size: 0.9rem;
+            }
+
+            .faq-item.active .faq-answer {
+                padding: 1rem;
+            }
+
+            /* Equity Partner Calculator Mobile */
+            .equity-calculator {
+                margin: 0 0.5rem;
+                padding: 1rem;
+            }
+
+            .currency-btn {
+                padding: 0.4rem 1rem;
+                font-size: 0.9rem;
+            }
+
+            .calculator-input label {
+                font-size: 0.9rem;
+            }
+
+            .input-group {
+                padding: 0.5rem;
+            }
+
+            .calculator-input input[type="number"] {
+                font-size: 1rem;
+            }
+
+            .slider-labels {
+                font-size: 0.75rem;
+            }
+
             .calculator-results {
                 grid-template-columns: 1fr;
                 gap: 0.75rem;
@@ -1152,25 +1689,159 @@
                 flex: 1;
                 text-align: left;
                 margin-bottom: 0;
+                font-size: 0.8rem;
             }
 
             .result-value {
-                font-size: 1.1rem;
+                font-size: 1rem;
             }
 
             .chart-legend {
                 flex-direction: column;
                 gap: 0.5rem;
-            }
-
-            .equity-calculator {
-                margin: 0 0.5rem;
-                padding: 1rem;
+                font-size: 0.85rem;
             }
 
             #equityChart {
                 width: 150px;
                 height: 150px;
+            }
+
+            /* Tech Grid Mobile */
+            .tech-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .tech-card {
+                padding: 1.5rem;
+            }
+
+            /* Footer Mobile */
+            footer {
+                padding: 2rem 0 1rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                padding: 0 1rem;
+            }
+
+            .footer-section {
+                margin-bottom: 2rem;
+            }
+
+            .footer-section h3 {
+                font-size: 1.2rem;
+                margin-bottom: 0.8rem;
+            }
+
+            .footer-section p,
+            .footer-section ul li {
+                font-size: 0.9rem;
+            }
+
+            .footer-bottom {
+                padding: 1rem;
+                font-size: 0.85rem;
+            }
+
+            /* Badge Mobile */
+            .badge {
+                padding: 0.3rem 0.8rem;
+                font-size: 0.75rem;
+            }
+
+            /* Service Portfolio Mobile */
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            /* Subsidiary Units Mobile */
+            .subsidiary-card {
+                min-height: auto !important;
+            }
+
+            /* Overflow Prevention */
+            * {
+                max-width: 100%;
+                word-wrap: break-word;
+            }
+
+            /* Horizontal Scroll Prevention */
+            html, body {
+                overflow-x: hidden;
+            }
+
+            @keyframes fadeInUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(30px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        }
+
+        /* Extra Small Devices */
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.4rem;
+            }
+
+            .hero-subtitle {
+                font-size: 0.9rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .portfolio-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .btn {
+                display: block;
+                width: 100%;
+                margin: 0.5rem 0;
+            }
+
+            .investment-price {
+                font-size: 1.5rem;
+            }
+
+            .card-value {
+                font-size: 1.3rem;
+            }
+        }
+
+        /* Touch-friendly adjustments */
+        @media (pointer: coarse) {
+            .nav-link,
+            .dropdown-toggle,
+            .btn,
+            .faq-question {
+                min-height: 44px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .form-input,
+            .form-select,
+            .form-textarea {
+                min-height: 44px;
             }
         }
     </style>
@@ -1180,8 +1851,15 @@
     <header>
         <nav>
             <a href="#" class="logo">
-                <div class="logo-icon">NTT</div>
-                <span>NTT Groups KSA</span>
+                <div class="logo-container">
+                    <!-- NTT Logo with Globe Icon -->
+                    <img src="https://docs.google.com/uc?export=download&id=1xKtt3P9qkpfF49bxqCMaBh5DyvY87uJv" 
+                         alt="NTT Logo" 
+                         class="logo-img"
+                         onerror="this.style.display='none'; document.getElementById('fallbackLogo').style.display='flex';">
+                    <div id="fallbackLogo" class="logo-icon" style="display: none; background: linear-gradient(135deg, #ff8c00, #4b0082); color: white; padding: 0.5rem; border-radius: 6px;">NTT</div>
+                    <div class="logo-text">NTT Groups KSA</div>
+                </div>
             </a>
             <ul class="nav-menu">
                 <li><a class="nav-link active" onclick="showPage('home')">Home</a></li>
@@ -1223,6 +1901,17 @@
     <div id="home" class="page active">
         <div class="hero">
             <div class="hero-content">
+                <!-- Logo Display in Hero Section -->
+                <div style="margin-bottom: 2rem;">
+                    <img src="https://docs.google.com/uc?export=download&id=1xKtt3P9qkpfF49bxqCMaBh5DyvY87uJv" 
+                         alt="NTT Logo" 
+                         style="height: 80px; width: auto; margin-bottom: 1rem;"
+                         onerror="this.style.display='none'; document.getElementById('heroFallback').style.display='inline-block';">
+                    <div id="heroFallback" style="display: none; background: linear-gradient(135deg, #ff8c00, #4b0082); padding: 1rem 2rem; border-radius: 10px; margin-bottom: 1rem;">
+                        <span style="font-size: 2rem; font-weight: bold; color: white; letter-spacing: 2px;">NTT</span>
+                    </div>
+                </div>
+                
                 <h1 class="fade-in">Investment Opportunity of a Lifetime</h1>
                 <p class="hero-subtitle">NTT Groups KSA - Professionally Valued at SAR 14 Million | SAR 50M+ Annual Turnover</p>
                 <p style="font-size: 1.2rem; margin: 2rem 0;">Join us with just SAR 2 Million investment for 21-22% equity stake</p>
@@ -1433,34 +2122,89 @@
 
         <section class="section">
             <h2 class="section-title">Company Evolution</h2>
-            <div class="timeline-container">
-                <div class="timeline-item">
-                    <h4>1991</h4>
-                    <p>Company Founded</p>
+            <p class="section-subtitle">Three decades of innovation, growth, and excellence</p>
+            
+            <div class="evolution-timeline">
+                <div class="timeline-line"></div>
+                
+                <div class="evolution-item" style="animation-delay: 0.1s;">
+                    <div class="evolution-year">1991</div>
+                    <div class="evolution-content">
+                        <div class="evolution-icon" style="background: linear-gradient(135deg, #4b0082, #6a0dad);">🚀</div>
+                        <h3>Company Founded</h3>
+                        <p>Established as Nawazinda Total Technologies Limited in India, laying the foundation for a global technology empire.</p>
+                    </div>
                 </div>
-                <div class="timeline-item">
-                    <h4>2000</h4>
-                    <p>International Expansion<br><small>Launched GCC Operations</small></p>
+                
+                <div class="evolution-item right" style="animation-delay: 0.2s;">
+                    <div class="evolution-year">2000</div>
+                    <div class="evolution-content">
+                        <div class="evolution-icon" style="background: linear-gradient(135deg, #ff8c00, #ffa500);">🌍</div>
+                        <h3>International Expansion</h3>
+                        <p>Launched operations across the GCC region, marking our entry into Middle Eastern markets.</p>
+                    </div>
                 </div>
-                <div class="timeline-item">
-                    <h4>2006</h4>
-                    <p>KSA Operations Started</p>
+                
+                <div class="evolution-item" style="animation-delay: 0.3s;">
+                    <div class="evolution-year">2006</div>
+                    <div class="evolution-content">
+                        <div class="evolution-icon" style="background: linear-gradient(135deg, #2ecc71, #27ae60);">🏢</div>
+                        <h3>KSA Operations Started</h3>
+                        <p>Established permanent presence in Saudi Arabia, becoming a key player in the Kingdom's infrastructure development.</p>
+                    </div>
                 </div>
-                <div class="timeline-item">
-                    <h4>2007</h4>
-                    <p>Diversification<br><small>Multi-Sector Portfolio</small></p>
+                
+                <div class="evolution-item right" style="animation-delay: 0.4s;">
+                    <div class="evolution-year">2007</div>
+                    <div class="evolution-content">
+                        <div class="evolution-icon" style="background: linear-gradient(135deg, #3498db, #2980b9);">📊</div>
+                        <h3>Diversification</h3>
+                        <p>Expanded into multi-sector portfolio including telecom, construction, and technology services.</p>
+                    </div>
                 </div>
-                <div class="timeline-item">
-                    <h4>2010</h4>
-                    <p>Strategic Restructuring<br><small>Global Expansion</small></p>
+                
+                <div class="evolution-item" style="animation-delay: 0.5s;">
+                    <div class="evolution-year">2010</div>
+                    <div class="evolution-content">
+                        <div class="evolution-icon" style="background: linear-gradient(135deg, #e74c3c, #c0392b);">🔄</div>
+                        <h3>Strategic Restructuring</h3>
+                        <p>Repositioned for global expansion with enhanced capabilities and streamlined operations.</p>
+                    </div>
                 </div>
-                <div class="timeline-item">
-                    <h4>2020</h4>
-                    <p>Technology Portfolio Launch</p>
+                
+                <div class="evolution-item right" style="animation-delay: 0.6s;">
+                    <div class="evolution-year">2020</div>
+                    <div class="evolution-content">
+                        <div class="evolution-icon" style="background: linear-gradient(135deg, #9b59b6, #8e44ad);">💻</div>
+                        <h3>Technology Portfolio Launch</h3>
+                        <p>Unveiled 17 market-ready IT, App & Platform products valued at SAR 150M.</p>
+                    </div>
                 </div>
-                <div class="timeline-item">
-                    <h4>2030</h4>
-                    <p>Planned IPO</p>
+                
+                <div class="evolution-item" style="animation-delay: 0.7s;">
+                    <div class="evolution-year">2024</div>
+                    <div class="evolution-content">
+                        <div class="evolution-icon" style="background: linear-gradient(135deg, #f39c12, #e67e22);">✅</div>
+                        <h3>Professional Valuation</h3>
+                        <p>UK entity confirmed SAR 14M valuation, opening new investment opportunities.</p>
+                    </div>
+                </div>
+                
+                <div class="evolution-item right" style="animation-delay: 0.8s;">
+                    <div class="evolution-year">2030</div>
+                    <div class="evolution-content future">
+                        <div class="evolution-icon" style="background: linear-gradient(135deg, #ffd700, #ffed4e);">🎯</div>
+                        <h3>Planned IPO</h3>
+                        <p>Strategic public offering aligned with Saudi Vision 2030 for exponential growth.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="margin-top: 3rem; text-align: center;">
+                <div style="background: linear-gradient(135deg, var(--primary), var(--secondary)); padding: 2rem; border-radius: 15px; color: white;">
+                    <h3 style="margin-bottom: 1rem;">Join Our Journey</h3>
+                    <p style="margin-bottom: 1.5rem;">Be part of our evolution from a regional leader to a global powerhouse</p>
+                    <button class="btn btn-warning" onclick="showPage('investment')">Explore Investment Opportunities</button>
                 </div>
             </div>
         </section>
@@ -1752,7 +2496,7 @@
                         <p>End-to-end telecommunications solutions supporting Saudi Arabia's digital transformation</p>
                         <div class="portfolio-stats">
                             <div class="portfolio-stat">
-                                <div class="portfolio-stat-value">500+</div>
+                                <div class="portfolio-stat-value">200+</div>
                                 <div class="portfolio-stat-label">5G Towers Deployed</div>
                             </div>
                             <div class="portfolio-stat">
@@ -1818,7 +2562,7 @@
                                 <div class="portfolio-stat-label">Powered</div>
                             </div>
                             <div class="portfolio-stat">
-                                <div class="portfolio-stat-value">5M+</div>
+                                <div class="portfolio-stat-value">500+</div>
                                 <div class="portfolio-stat-label">Users Served</div>
                             </div>
                         </div>
@@ -1833,20 +2577,20 @@
                         <p>Sustainable energy solutions and critical infrastructure development</p>
                         <div class="portfolio-stats">
                             <div class="portfolio-stat">
-                                <div class="portfolio-stat-value">50MW</div>
+                                <div class="portfolio-stat-value">20MW</div>
                                 <div class="portfolio-stat-label">Power Capacity</div>
                             </div>
                             <div class="portfolio-stat">
-                                <div class="portfolio-stat-value">30+</div>
+                                <div class="portfolio-stat-value">10+</div>
                                 <div class="portfolio-stat-label">Energy Projects</div>
                             </div>
                             <div class="portfolio-stat">
-                                <div class="portfolio-stat-value">40%</div>
+                                <div class="portfolio-stat-value">20%</div>
                                 <div class="portfolio-stat-label">Renewable Focus</div>
                             </div>
                             <div class="portfolio-stat">
                                 <div class="portfolio-stat-value">Vision 2030</div>
-                                <div class="portfolio-stat-label">Aligned</div>
+                                <div class="portfolio-stat-label">Aligned/IPO Initiative</div>
                             </div>
                         </div>
                     </div>
@@ -1860,11 +2604,11 @@
                         <p>Intelligent urban solutions for Saudi Arabia's mega projects</p>
                         <div class="portfolio-stats">
                             <div class="portfolio-stat">
-                                <div class="portfolio-stat-value">NEOM</div>
+                                <div class="portfolio-stat-value">ARMCO & NEOM</div>
                                 <div class="portfolio-stat-label">Partner</div>
                             </div>
                             <div class="portfolio-stat">
-                                <div class="portfolio-stat-value">10K+</div>
+                                <div class="portfolio-stat-value">5K+</div>
                                 <div class="portfolio-stat-label">IoT Devices</div>
                             </div>
                             <div class="portfolio-stat">
@@ -2404,6 +3148,141 @@
             </div>
         </section>
 
+<div class="technical-support-card">
+                <!-- Header -->
+                <div style="background: linear-gradient(135deg, var(--primary) 0%, #3b82f6 100%); color: white; padding: 2rem; text-align: center;">
+                    <h3 style="font-size: 1.4rem; font-weight: 600; margin-bottom: 0.5rem; color: white;">🆘 Technical Support & Alternative Contact</h3>
+                    <p style="opacity: 0.9; font-size: 1rem; margin: 0; color: white;">If the "Submit Investment Inquiry" button is not working or you experience any technical issues</p>
+                </div>
+
+                <!-- Body -->
+                <div style="padding: 2.5rem;">
+                    <!-- Email Support Section -->
+                    <div style="margin-bottom: 2.5rem;">
+                        <h4 style="color: var(--primary); font-size: 1.2rem; font-weight: 600; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
+                            <span style="font-size: 1.3rem;">📧</span> Direct Email Support
+                        </h4>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+                            <div style="background: #f8fafc; padding: 1.25rem; border-radius: 10px; border-left: 4px solid var(--primary);">
+                                <h5 style="color: var(--dark); font-weight: 600; margin-bottom: 0.75rem; font-size: 1rem;">NTT Groups Admin Team</h5>
+                                <p style="margin: 0.5rem 0;"><a href="mailto:info@nttgroups.com" style="color: var(--primary); text-decoration: none; font-weight: 500;">info@nttgroups.com</a></p>
+                                <p style="margin: 0;"><a href="mailto:info@worldbusinessgroups.com" style="color: var(--primary); text-decoration: none; font-weight: 500;">info@worldbusinessgroups.com</a></p>
+                            </div>
+                            <div style="background: #f8fafc; padding: 1.25rem; border-radius: 10px; border-left: 4px solid var(--primary);">
+                                <h5 style="color: var(--dark); font-weight: 600; margin-bottom: 0.75rem; font-size: 1rem;">CEO Direct Contact</h5>
+                                <p style="margin: 0.5rem 0;"><a href="mailto:ceo@nttgroups.com" style="color: var(--primary); text-decoration: none; font-weight: 500;">ceo@nttgroups.com</a></p>
+                                <p style="margin: 0;"><a href="mailto:shakil@nttgroups" style="color: var(--primary); text-decoration: none; font-weight: 500;">shakil@nttgroups</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Global Offices Section -->
+                    <div style="margin-bottom: 2.5rem;">
+                        <h4 style="color: var(--primary); font-size: 1.2rem; font-weight: 600; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
+                            <span style="font-size: 1.3rem;">🌍</span> Global Office Locations
+                        </h4>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.25rem;">
+                            <div class="office-card" style="background: white; border: 2px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                                <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">🇸🇦</div>
+                                <h5 style="color: var(--primary); font-weight: 600; margin-bottom: 0.5rem; font-size: 1.1rem;">Saudi Arabia Office</h5>
+                                <p style="color: #6b7280; font-size: 0.95rem; margin: 0.25rem 0;">Riyadh, KSA</p>
+                                <p style="color: #6b7280; font-size: 0.9rem; margin: 0;">Vision 2030 Operations</p>
+                            </div>
+                            <div class="office-card" style="background: white; border: 2px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                                <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">🇮🇳</div>
+                                <h5 style="color: var(--primary); font-weight: 600; margin-bottom: 0.5rem; font-size: 1.1rem;">Global Headquarters</h5>
+                                <p style="color: #6b7280; font-size: 0.95rem; margin: 0.25rem 0;">New Delhi, India</p>
+                                <p style="color: #6b7280; font-size: 0.9rem; margin: 0;">22 Country Coordination</p>
+                            </div>
+                            <div class="office-card" style="background: white; border: 2px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                                <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">🇬🇧</div>
+                                <h5 style="color: var(--primary); font-weight: 600; margin-bottom: 0.5rem; font-size: 1.1rem;">UK Office</h5>
+                                <p style="color: #6b7280; font-size: 0.95rem; margin: 0.25rem 0;">London, UK</p>
+                                <p style="color: #6b7280; font-size: 0.9rem; margin: 0;">European Operations</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Banking Information Section -->
+                    <div style="margin-bottom: 2rem;">
+                        <h4 style="color: var(--primary); font-size: 1.2rem; font-weight: 600; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
+                            <span style="font-size: 1.3rem;">🏦</span> Banking & Payment Information
+                        </h4>
+                        
+                        <!-- UK Bank Details -->
+                        <div style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border: 2px solid #f59e0b; border-radius: 12px; padding: 2rem; margin-bottom: 1.5rem;">
+                            <h5 style="color: #92400e; margin-bottom: 1.5rem; font-weight: 600; font-size: 1.1rem;">🇬🇧 UK Bank Account Details (World Businesses Groups Limited)</h5>
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem;">
+                                <div style="background: white; padding: 1rem; border-radius: 8px; border: 1px solid #fbbf24;">
+                                    <strong style="color: #92400e; display: block; margin-bottom: 0.5rem;">Account Holder:</strong>
+                                    <span style="color: #374151;">WORLD BUSINESSES GROUPS LIMITED</span>
+                                </div>
+                                <div style="background: white; padding: 1rem; border-radius: 8px; border: 1px solid #fbbf24;">
+                                    <strong style="color: #92400e; display: block; margin-bottom: 0.5rem;">Sort Code:</strong>
+                                    <span style="color: #374151;">23-08-01</span>
+                                </div>
+                                <div style="background: white; padding: 1rem; border-radius: 8px; border: 1px solid #fbbf24;">
+                                    <strong style="color: #92400e; display: block; margin-bottom: 0.5rem;">Account Number:</strong>
+                                    <span style="color: #374151;">73284887</span>
+                                </div>
+                                <div style="background: white; padding: 1rem; border-radius: 8px; border: 1px solid #fbbf24;">
+                                    <strong style="color: #92400e; display: block; margin-bottom: 0.5rem;">IBAN:</strong>
+                                    <span style="color: #374151;">GB40 TRWI 2308 0173 2848 87</span>
+                                </div>
+                                <div style="background: white; padding: 1rem; border-radius: 8px; border: 1px solid #fbbf24;">
+                                    <strong style="color: #92400e; display: block; margin-bottom: 0.5rem;">Bank Address:</strong>
+                                    <span style="color: #374151;">56 Shoreditch High Street<br>London E1 6JJ, United Kingdom</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- US Bank Details -->
+                        <div style="background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%); border: 2px solid #3b82f6; border-radius: 12px; padding: 2rem;">
+                            <h5 style="color: #1e40af; margin-bottom: 1.5rem; font-weight: 600; font-size: 1.1rem;">🇺🇸 US Bank Account Details (World Businesses Groups Limited)</h5>
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem;">
+                                <div style="background: white; padding: 1rem; border-radius: 8px; border: 1px solid #3b82f6;">
+                                    <strong style="color: #1e40af; display: block; margin-bottom: 0.5rem;">Account Holder:</strong>
+                                    <span style="color: #374151;">WORLD BUSINESSES GROUPS LIMITED</span>
+                                </div>
+                                <div style="background: white; padding: 1rem; border-radius: 8px; border: 1px solid #3b82f6;">
+                                    <strong style="color: #1e40af; display: block; margin-bottom: 0.5rem;">Routing Number (ACH/Wire):</strong>
+                                    <span style="color: #374151;">026073150</span>
+                                </div>
+                                <div style="background: white; padding: 1rem; border-radius: 8px; border: 1px solid #3b82f6;">
+                                    <strong style="color: #1e40af; display: block; margin-bottom: 0.5rem;">Account Number:</strong>
+                                    <span style="color: #374151;">8313822536</span>
+                                </div>
+                                <div style="background: white; padding: 1rem; border-radius: 8px; border: 1px solid #3b82f6;">
+                                    <strong style="color: #1e40af; display: block; margin-bottom: 0.5rem;">Swift/BIC Code:</strong>
+                                    <span style="color: #374151;">CMFGUS33</span>
+                                </div>
+                                <div style="background: white; padding: 1rem; border-radius: 8px; border: 1px solid #3b82f6;">
+                                    <strong style="color: #1e40af; display: block; margin-bottom: 0.5rem;">Account Type:</strong>
+                                    <span style="color: #374151;">Checking</span>
+                                </div>
+                                <div style="background: white; padding: 1rem; border-radius: 8px; border: 1px solid #3b82f6;">
+                                    <strong style="color: #1e40af; display: block; margin-bottom: 0.5rem;">Bank Address:</strong>
+                                    <span style="color: #374151;">30 W. 26th Street, Sixth Floor<br>New York NY 10010, United States</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Security Disclaimer -->
+                    <div style="background: #fef2f2; border: 2px solid #fecaca; border-radius: 10px; padding: 1.5rem; text-align: center;">
+                        <p style="color: #991b1b; font-size: 0.95rem; font-weight: 600; margin: 0;">
+                            ⚠️ <strong>Important Security Notice:</strong> For security purposes, please verify all banking details directly with our admin team before making any transfers. Always confirm account information through official channels.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- END OF INFORMATION CARD -->
+
+            
+               </section>
+    </div>
+
+
         <section class="section" style="background: var(--gray);">
             <h2 class="section-title">Our Offices</h2>
             <div class="cards-grid">
@@ -2436,7 +3315,16 @@
     <footer>
         <div class="footer-content">
             <div class="footer-section">
-                <h3>NTT Groups KSA</h3>
+                <div style="margin-bottom: 1rem;">
+                    <img src="https://docs.google.com/uc?export=download&id=1xKtt3P9qkpfF49bxqCMaBh5DyvY87uJv" 
+                         alt="NTT Logo" 
+                         style="height: 60px; width: auto; margin-bottom: 0.5rem;"
+                         onerror="this.style.display='none'; document.getElementById('footerFallback').style.display='inline-block';">
+                    <div id="footerFallback" style="display: none; background: linear-gradient(135deg, #ff8c00, #4b0082); padding: 0.5rem 1rem; border-radius: 6px; margin-bottom: 0.5rem;">
+                        <span style="font-size: 1.2rem; font-weight: bold; color: white; letter-spacing: 1px;">NTT</span>
+                    </div>
+                    <h3>NTT Groups KSA</h3>
+                </div>
                 <p>Professional Valuation: SAR 14 Million<br>
                 Investment Opportunity: SAR 2 Million<br>
                 Equity Offering: 21-22%<br>
