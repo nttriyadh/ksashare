@@ -3094,59 +3094,472 @@
     </div>
 
     <!-- Page 7: Contact -->
-    <div id="contact" class="page">
-        <section class="section">
-            <h2 class="section-title">Start Your Investment Journey</h2>
-            <p class="section-subtitle">Join us in building the future of multi-sector business in the Middle East</p>
+    <!-- CONTACT PAGE SECTION -->
+<div id="contact" class="page">
+  <section class="section">
+    <h2 class="section-title">Start Your Investment Journey</h2>
+    <p class="section-subtitle">Join us in building the future of multi-sector business in the Middle East</p>
 
-            <div class="contact-form">
-                <h3 style="text-align: center; color: var(--primary); margin-bottom: 2rem;">Investment Inquiry Form</h3>
-                <form onsubmit="handleSubmit(event)">
-                    <div class="form-grid">
-                        <div class="form-group">
-                            <label class="form-label">Full Name *</label>
-                            <input type="text" class="form-input" required placeholder="Enter your full name">
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label">Email Address *</label>
-                            <input type="email" class="form-input" required placeholder="your.email@example.com">
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label">Phone Number *</label>
-                            <input type="tel" class="form-input" required placeholder="+966 XX XXX XXXX">
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label">Company Name</label>
-                            <input type="text" class="form-input" placeholder="Your company name">
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label">Investment Interest *</label>
-                            <select class="form-select" required>
-                                <option value="">Select Investment Type</option>
-                                <option value="strategic">Strategic Partner (SAR 2M)</option>
-                                <option value="equity-flexible">Equity Partner - Flexible Investment</option>
-                                <option value="franchise">Franchise Partner (SAR 500K+)</option>
-                                <option value="shares">Share Purchase</option>
-                                <option value="project">Project Partner</option>
-                                <option value="technology">Technology Investment</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label">Investment Amount</label>
-                            <input type="text" class="form-input" placeholder="SAR Amount">
-                        </div>
-                        <div class="form-group full">
-                            <label class="form-label">Message</label>
-                            <textarea class="form-textarea" placeholder="Tell us about your investment goals and interests"></textarea>
-                        </div>
-                    </div>
-                    <div style="text-align: center; margin-top: 2rem;">
-                        <button type="submit" class="btn btn-success">Submit Investment Inquiry</button>
-                    </div>
-                </form>
-            </div>
-        </section>
+    <div class="contact-form">
+      <h3 style="text-align: center; color: var(--primary); margin-bottom: 2rem;">Investment Inquiry Form</h3>
+
+      <form id="investmentForm">
+        <div class="form-grid">
+          <div class="form-group">
+            <label class="form-label" for="full_name">Full Name *</label>
+            <input type="text" id="full_name" name="full_name" class="form-input" required placeholder="Enter your full name" />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="email">Email Address *</label>
+            <input type="email" id="email" name="email" class="form-input" required placeholder="your.email@example.com" />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="phone">Phone Number *</label>
+            <input type="tel" id="phone" name="phone" class="form-input" required placeholder="+966 XX XXX XXXX" />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="company">Company Name</label>
+            <input type="text" id="company" name="company" class="form-input" placeholder="Your company name" />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="investment_interest">Investment Interest *</label>
+            <select id="investment_interest" name="investment_interest" class="form-select" required>
+              <option value="">Select Investment Type</option>
+              <option value="strategic">Strategic Partner (SAR 2M)</option>
+              <option value="equity-flexible">Equity Partner - Flexible Investment</option>
+              <option value="franchise">Franchise Partner (SAR 500K+)</option>
+              <option value="shares">Share Purchase</option>
+              <option value="project">Project Partner</option>
+              <option value="technology">Technology Investment</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="investment_amount">Investment Amount</label>
+            <input type="text" id="investment_amount" name="investment_amount" class="form-input" placeholder="SAR Amount" />
+          </div>
+
+          <div class="form-group full">
+            <label class="form-label" for="message">Message</label>
+            <textarea id="message" name="message" class="form-textarea" placeholder="Tell us about your investment goals and interests"></textarea>
+          </div>
+
+          <!-- Honeypot (anti-spam) -->
+          <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off" />
+        </div>
+
+        <div style="text-align: center; margin-top: 2rem;">
+          <button id="submitBtn" type="submit" class="btn btn-success">Submit Investment Inquiry</button>
+          <div id="formStatus" style="margin-top:0.75rem; font-size:0.95rem;"></div>
+        </div>
+      </form>
+    </div>
+  </section>
+</div>
+
+<!-- SUBMISSION SCRIPT (place before </body>) -->
+<!-- REPLACE THIS ENTIRE SCRIPT SECTION IN YOUR HTML FILE -->
+<!-- Find the existing script section around line 2890 and replace it with this -->
+
+<script>
+/**
+ * NTT Groups KSA Contact Form Handler
+ * Updated to save data to Google Sheets
+ */
+
+// ==========================================
+// IMPORTANT: REPLACE WITH YOUR WEB APP URL
+// ==========================================
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwC0eZkUZcG9LojT1LqXS6kZWtUbwty0ga5BFxhEV9Q5AhB0-8H47kHOYxVc6NDpG3J/exec';
+
+// Initialize when page loads
+document.addEventListener('DOMContentLoaded', function () {
+  const form = document.getElementById('investmentForm');
+  if (form) {
+    form.addEventListener('submit', handleFormSubmission);
+  }
+});
+
+/**
+ * Handle form submission to Google Sheets
+ */
+async function handleFormSubmission(event) {
+  event.preventDefault();
+  
+  const form = event.target;
+  const submitBtn = document.getElementById('submitBtn');
+  const statusDiv = document.getElementById('formStatus');
+  
+  // Prepare form data
+  const formData = new FormData(form);
+  formData.append('page_url', window.location.href);
+  formData.append('user_agent', navigator.userAgent);
+  
+  // Check honeypot (anti-spam)
+  if (formData.get('website') && formData.get('website').trim() !== '') {
+    showSuccessMessage();
+    return;
+  }
+  
+  // Validate required fields
+  const requiredFields = ['full_name', 'email', 'phone', 'investment_interest'];
+  const missingFields = requiredFields.filter(field => {
+    const value = formData.get(field);
+    return !value || value.trim() === '';
+  });
+  
+  if (missingFields.length > 0) {
+    showError('Please fill in all required fields: ' + missingFields.join(', '));
+    return;
+  }
+  
+  // Email validation
+  const email = formData.get('email');
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    showError('Please enter a valid email address');
+    return;
+  }
+  
+  // Update button state
+  const originalText = submitBtn.textContent;
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Submitting...';
+  submitBtn.style.background = '#95a5a6';
+  
+  // Show sending message
+  statusDiv.textContent = 'Sending your inquiry...';
+  statusDiv.style.color = '#3498db';
+  statusDiv.style.display = 'block';
+  
+  try {
+    // Submit to Google Apps Script
+    const response = await fetch(SCRIPT_URL, {
+      method: 'POST',
+      body: formData,
+      mode: 'cors',
+      cache: 'no-cache'
+    });
+    
+    // Parse response
+    let result;
+    try {
+      const responseText = await response.text();
+      result = JSON.parse(responseText);
+    } catch (parseError) {
+      throw new Error('Invalid server response');
+    }
+    
+    // Handle response
+    if (response.ok && result && result.ok) {
+      showSuccessMessage();
+      form.reset();
+    } else {
+      const errorMessage = (result && result.message) || 'Submission failed';
+      throw new Error(errorMessage);
+    }
+    
+  } catch (error) {
+    showError(error.message);
+  } finally {
+    // Restore button
+    submitBtn.disabled = false;
+    submitBtn.textContent = originalText;
+    submitBtn.style.background = '';
+  }
+}
+
+/**
+ * Show success message
+ */
+function showSuccessMessage() {
+  const statusDiv = document.getElementById('formStatus');
+  statusDiv.style.color = '#27ae60';
+  statusDiv.textContent = 'Thank you! Your inquiry has been submitted successfully.';
+  
+  setTimeout(() => {
+    alert(
+      'Thank you for your investment inquiry!\n\n' +
+      'Our team will contact you within 72 hours to discuss your partnership opportunity.\n\n' +
+      'You will receive:\n' +
+      '• Detailed investment deck\n' +
+      '• Partnership terms\n' +
+      '• Access to due diligence materials\n' +
+      '• Next steps for investment process'
+    );
+  }, 500);
+}
+
+/**
+ * Show error message
+ */
+function showError(message) {
+  const statusDiv = document.getElementById('formStatus');
+  statusDiv.style.color = '#e74c3c';
+  statusDiv.textContent = 'Error: ' + message;
+  statusDiv.style.display = 'block';
+  
+  setTimeout(() => {
+    alert(
+      'Sorry, there was a problem submitting your inquiry:\n' + 
+      message + 
+      '\n\nPlease try again or contact us directly at info@nttgroups.com'
+    );
+  }, 100);
+}
+
+// ==========================================
+// KEEP ALL YOUR EXISTING FUNCTIONS BELOW
+// ==========================================
+
+// Page navigation
+function showPage(pageId) {
+    // Hide all pages
+    const pages = document.querySelectorAll('.page');
+    pages.forEach(page => page.classList.remove('active'));
+    
+    // Show selected page
+    document.getElementById(pageId).classList.add('active');
+    
+    // Update nav links
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => link.classList.remove('active'));
+    
+    // Find and activate the corresponding nav link
+    navLinks.forEach(link => {
+        if (link.getAttribute('onclick') === `showPage('${pageId}')`) {
+            link.classList.add('active');
+        }
+    });
+    
+    // Close mobile menu if open
+    document.querySelector('.nav-menu').classList.remove('active');
+    document.querySelector('.mobile-menu').classList.remove('active');
+    
+    // Scroll to top
+    window.scrollTo(0, 0);
+}
+
+// Dropdown toggle
+function toggleDropdown(event) {
+    event.preventDefault();
+    const dropdown = event.target.closest('.dropdown');
+    dropdown.classList.toggle('active');
+    
+    // Close other dropdowns
+    document.querySelectorAll('.dropdown').forEach(d => {
+        if (d !== dropdown) {
+            d.classList.remove('active');
+        }
+    });
+}
+
+// Close dropdown when clicking outside
+document.addEventListener('click', function(event) {
+    if (!event.target.closest('.dropdown')) {
+        document.querySelectorAll('.dropdown').forEach(d => {
+            d.classList.remove('active');
+        });
+    }
+});
+
+// Mobile menu toggle
+function toggleMobileMenu() {
+    const navMenu = document.querySelector('.nav-menu');
+    navMenu.classList.toggle('active');
+    
+    // Animate hamburger menu
+    const mobileMenu = document.querySelector('.mobile-menu');
+    mobileMenu.classList.toggle('active');
+}
+
+// FAQ toggle
+function toggleFAQ(element) {
+    const faqItem = element.parentElement;
+    const allItems = document.querySelectorAll('.faq-item');
+    
+    // Close all other FAQs
+    allItems.forEach(item => {
+        if (item !== faqItem) {
+            item.classList.remove('active');
+        }
+    });
+    
+    // Toggle current FAQ
+    faqItem.classList.toggle('active');
+}
+
+// Equity Partner Calculator Functions
+let currentCurrency = 'SAR';
+const companyValuation = 14000000; // SAR 14M
+const expectedROI = 0.15; // 15% annual ROI
+const usdToSar = 3.75; // Exchange rate
+
+function toggleCurrency(currency) {
+    currentCurrency = currency;
+    document.getElementById('sarBtn').classList.toggle('active', currency === 'SAR');
+    document.getElementById('usdBtn').classList.toggle('active', currency === 'USD');
+    document.getElementById('currencySymbol').textContent = currency;
+    
+    // Update input placeholder
+    const input = document.getElementById('investmentAmount');
+    if (input.value) {
+        if (currency === 'USD') {
+            input.value = Math.round(parseFloat(input.value) / usdToSar);
+        } else {
+            input.value = Math.round(parseFloat(input.value) * usdToSar);
+        }
+    }
+    
+    calculateEquity();
+}
+
+function updateFromSlider() {
+    const slider = document.getElementById('investmentSlider');
+    const input = document.getElementById('investmentAmount');
+    let value = parseFloat(slider.value);
+    
+    if (currentCurrency === 'USD') {
+        value = value / usdToSar;
+    }
+    
+    input.value = Math.round(value);
+    calculateEquity();
+}
+
+function calculateEquity() {
+    const inputAmount = document.getElementById('investmentAmount').value;
+    if (!inputAmount || inputAmount <= 0) {
+        resetResults();
+        return;
+    }
+    
+    let investmentSAR = parseFloat(inputAmount);
+    if (currentCurrency === 'USD') {
+        investmentSAR = investmentSAR * usdToSar;
+    }
+    
+    // Update slider position
+    document.getElementById('investmentSlider').value = investmentSAR;
+    
+    // Calculate equity percentage
+    const equityPercentage = (investmentSAR / companyValuation) * 100;
+    
+    // Calculate returns
+    const annualReturn = investmentSAR * expectedROI;
+    const fiveYearReturn = investmentSAR * (Math.pow(1 + expectedROI, 5) - 1);
+    
+    // Update results
+    document.getElementById('equityPercentage').textContent = equityPercentage.toFixed(2) + '%';
+    
+    const currencyPrefix = currentCurrency === 'SAR' ? 'SAR ' : '$';
+    document.getElementById('annualReturn').textContent = currencyPrefix + formatNumber(currentCurrency === 'USD' ? annualReturn / usdToSar : annualReturn);
+    document.getElementById('fiveYearReturn').textContent = currencyPrefix + formatNumber(currentCurrency === 'USD' ? fiveYearReturn / usdToSar : fiveYearReturn);
+    
+    // Update chart
+    drawEquityChart(equityPercentage);
+    
+    // Update legend
+    document.getElementById('yourEquityLegend').textContent = equityPercentage.toFixed(2) + '%';
+    document.getElementById('othersEquityLegend').textContent = (100 - equityPercentage).toFixed(2) + '%';
+}
+
+function formatNumber(num) {
+    if (num >= 1000000) {
+        return (num / 1000000).toFixed(2) + 'M';
+    } else if (num >= 1000) {
+        return (num / 1000).toFixed(0) + 'K';
+    }
+    return num.toFixed(0);
+}
+
+function drawEquityChart(equityPercentage) {
+    const canvas = document.getElementById('equityChart');
+    if (!canvas) return;
+    
+    const ctx = canvas.getContext('2d');
+    const centerX = canvas.width / 2;
+    const centerY = canvas.height / 2;
+    const radius = 80;
+    
+    // Clear canvas
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    
+    // Draw your equity portion
+    const yourAngle = (equityPercentage / 100) * 2 * Math.PI;
+    ctx.beginPath();
+    ctx.arc(centerX, centerY, radius, -Math.PI/2, -Math.PI/2 + yourAngle);
+    ctx.lineTo(centerX, centerY);
+    ctx.fillStyle = '#2ecc71';
+    ctx.fill();
+    
+    // Draw others' equity portion
+    ctx.beginPath();
+    ctx.arc(centerX, centerY, radius, -Math.PI/2 + yourAngle, -Math.PI/2 + 2 * Math.PI);
+    ctx.lineTo(centerX, centerY);
+    ctx.fillStyle = '#34495e';
+    ctx.fill();
+    
+    // Draw white circle in center
+    ctx.beginPath();
+    ctx.arc(centerX, centerY, radius * 0.6, 0, 2 * Math.PI);
+    ctx.fillStyle = 'white';
+    ctx.fill();
+    
+    // Draw percentage text
+    ctx.font = 'bold 24px system-ui';
+    ctx.fillStyle = '#2ecc71';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillText(equityPercentage.toFixed(1) + '%', centerX, centerY);
+}
+
+function resetResults() {
+    document.getElementById('equityPercentage').textContent = '0%';
+    document.getElementById('annualReturn').textContent = '0';
+    document.getElementById('fiveYearReturn').textContent = '0';
+    document.getElementById('yourEquityLegend').textContent = '0%';
+    document.getElementById('othersEquityLegend').textContent = '100%';
+    
+    const canvas = document.getElementById('equityChart');
+    if (canvas) {
+        const ctx = canvas.getContext('2d');
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+    }
+}
+
+function proceedWithEquityPartner() {
+    const investmentAmount = document.getElementById('investmentAmount').value;
+    if (!investmentAmount || investmentAmount <= 0) {
+        alert('Please enter your investment amount to proceed.');
+        return;
+    }
+    
+    const equityPercentage = document.getElementById('equityPercentage').textContent;
+    const message = `Thank you for your interest in the Equity Partner Investment Model!\n\nYour Selected Investment: ${currentCurrency} ${formatNumber(investmentAmount)}\nEquity Stake: ${equityPercentage}\n\nOur investment team will contact you within 24 hours with:\n• Customized partnership agreement\n• Detailed financial projections\n• Due diligence materials\n• Next steps for onboarding`;
+    
+    alert(message);
+    showPage('contact');
+}
+
+// Initialize chart on page load
+window.addEventListener('load', function() {
+    setTimeout(() => {
+        const canvas = document.getElementById('equityChart');
+        if (canvas) {
+            drawEquityChart(0);
+        }
+    }, 100);
+});
+
+console.log('NTT Groups website loaded successfully');
+</script>
+
+</section>
 
 <div class="technical-support-card">
                 <!-- Header -->
