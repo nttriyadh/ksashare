@@ -3163,30 +3163,31 @@
 </div>
 
 <!-- SUBMISSION SCRIPT (place before </body>) -->
-<!-- REPLACE THIS ENTIRE SCRIPT SECTION IN YOUR HTML FILE -->
-<!-- Find the existing script section around line 2890 and replace it with this -->
+<!-- REPLACE THE ENTIRE SCRIPT SECTION IN YOUR HTML FILE -->
+<!-- Find around line 2890 and replace the complete script section -->
 
 <script>
 /**
  * NTT Groups KSA Contact Form Handler
- * Updated to save data to Google Sheets
+ * Now supports dual email notifications (admin + investor)
  */
 
 // ==========================================
 // IMPORTANT: REPLACE WITH YOUR WEB APP URL
 // ==========================================
-const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwC0eZkUZcG9LojT1LqXS6kZWtUbwty0ga5BFxhEV9Q5AhB0-8H47kHOYxVc6NDpG3J/exec';
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxOPqLa9j5khzM9ZODHeI3IOeybKvg-Yo47c1izKHUWqN9UkVHPDnpRsgEw4ZHbW0E0/exec';
 
 // Initialize when page loads
 document.addEventListener('DOMContentLoaded', function () {
   const form = document.getElementById('investmentForm');
   if (form) {
     form.addEventListener('submit', handleFormSubmission);
+    console.log('NTT Groups contact form with email notifications initialized');
   }
 });
 
 /**
- * Handle form submission to Google Sheets
+ * Handle form submission with email notifications
  */
 async function handleFormSubmission(event) {
   event.preventDefault();
@@ -3232,12 +3233,14 @@ async function handleFormSubmission(event) {
   submitBtn.style.background = '#95a5a6';
   
   // Show sending message
-  statusDiv.textContent = 'Sending your inquiry...';
+  statusDiv.textContent = 'Sending your inquiry and email notifications...';
   statusDiv.style.color = '#3498db';
   statusDiv.style.display = 'block';
   
   try {
-    // Submit to Google Apps Script
+    console.log('Submitting form with email notifications to:', SCRIPT_URL);
+    
+    // Submit to Google Apps Script (handles both database save and emails)
     const response = await fetch(SCRIPT_URL, {
       method: 'POST',
       body: formData,
@@ -3245,18 +3248,22 @@ async function handleFormSubmission(event) {
       cache: 'no-cache'
     });
     
+    console.log('Response status:', response.status);
+    
     // Parse response
     let result;
     try {
       const responseText = await response.text();
+      console.log('Response:', responseText);
       result = JSON.parse(responseText);
     } catch (parseError) {
+      console.error('Parse error:', parseError);
       throw new Error('Invalid server response');
     }
     
     // Handle response
     if (response.ok && result && result.ok) {
-      showSuccessMessage();
+      showSuccessMessageWithEmails(result.data);
       form.reset();
     } else {
       const errorMessage = (result && result.message) || 'Submission failed';
@@ -3264,6 +3271,7 @@ async function handleFormSubmission(event) {
     }
     
   } catch (error) {
+    console.error('Submission error:', error);
     showError(error.message);
   } finally {
     // Restore button
@@ -3274,7 +3282,41 @@ async function handleFormSubmission(event) {
 }
 
 /**
- * Show success message
+ * Show success message with email confirmation
+ */
+function showSuccessMessageWithEmails(data) {
+  const statusDiv = document.getElementById('formStatus');
+  statusDiv.style.color = '#27ae60';
+  statusDiv.style.background = '#d5f4e6';
+  statusDiv.style.padding = '15px';
+  statusDiv.style.borderRadius = '5px';
+  statusDiv.style.border = '1px solid #27ae60';
+  statusDiv.innerHTML = `
+    <strong>✅ Success!</strong> Your inquiry has been submitted and email notifications sent.
+  `;
+  
+  setTimeout(() => {
+    alert(
+      '🎉 Investment Inquiry Submitted Successfully!\n\n' +
+      '✅ Your inquiry has been received by our investment team\n' +
+      '✅ Admin notification sent to our team\n' +
+      '✅ Confirmation email sent to your inbox\n' +
+      '✅ We will contact you within 72 hours\n\n' +
+      'What happens next:\n' +
+      '📧 Check your email for confirmation details\n' +
+      '📋 Our team will review your submission\n' +
+      '📞 Personal contact within 72 hours\n' +
+      '📊 Detailed investment deck via email\n' +
+      '🤝 Partnership discussion scheduling\n' +
+      '📑 Access to due diligence materials\n\n' +
+      'Thank you for considering NTT Groups KSA!\n\n' +
+      'If you don\'t receive the confirmation email within 5 minutes,\nplease check your spam folder or contact us at invest@nttgroups.com'
+    );
+  }, 1000);
+}
+
+/**
+ * Show success message (fallback)
  */
 function showSuccessMessage() {
   const statusDiv = document.getElementById('formStatus');
@@ -3300,47 +3342,48 @@ function showSuccessMessage() {
 function showError(message) {
   const statusDiv = document.getElementById('formStatus');
   statusDiv.style.color = '#e74c3c';
-  statusDiv.textContent = 'Error: ' + message;
+  statusDiv.style.background = '#ffeaa7';
+  statusDiv.style.padding = '15px';
+  statusDiv.style.borderRadius = '5px';
+  statusDiv.style.border = '1px solid #e74c3c';
+  statusDiv.innerHTML = `<strong>⚠️ Error:</strong> ${message}`;
   statusDiv.style.display = 'block';
   
   setTimeout(() => {
     alert(
-      'Sorry, there was a problem submitting your inquiry:\n' + 
-      message + 
-      '\n\nPlease try again or contact us directly at info@nttgroups.com'
+      '⚠️ Submission Error\n\n' +
+      'There was a problem submitting your inquiry:\n\n' +
+      message + '\n\n' +
+      'Please try again, or contact us directly:\n' +
+      '📧 invest@nttgroups.com\n' +
+      '📧 info@nttgroups.com\n' +
+      '📧 ceo@nttgroups.com\n\n' +
+      'Our team is ready to assist you.'
     );
   }, 100);
 }
 
 // ==========================================
 // KEEP ALL YOUR EXISTING FUNCTIONS BELOW
+// (Don't change these - they're for your website functionality)
 // ==========================================
 
 // Page navigation
 function showPage(pageId) {
-    // Hide all pages
     const pages = document.querySelectorAll('.page');
     pages.forEach(page => page.classList.remove('active'));
-    
-    // Show selected page
     document.getElementById(pageId).classList.add('active');
     
-    // Update nav links
     const navLinks = document.querySelectorAll('.nav-link');
     navLinks.forEach(link => link.classList.remove('active'));
-    
-    // Find and activate the corresponding nav link
     navLinks.forEach(link => {
         if (link.getAttribute('onclick') === `showPage('${pageId}')`) {
             link.classList.add('active');
         }
     });
     
-    // Close mobile menu if open
     document.querySelector('.nav-menu').classList.remove('active');
     document.querySelector('.mobile-menu').classList.remove('active');
-    
-    // Scroll to top
     window.scrollTo(0, 0);
 }
 
@@ -3349,8 +3392,6 @@ function toggleDropdown(event) {
     event.preventDefault();
     const dropdown = event.target.closest('.dropdown');
     dropdown.classList.toggle('active');
-    
-    // Close other dropdowns
     document.querySelectorAll('.dropdown').forEach(d => {
         if (d !== dropdown) {
             d.classList.remove('active');
@@ -3371,8 +3412,6 @@ document.addEventListener('click', function(event) {
 function toggleMobileMenu() {
     const navMenu = document.querySelector('.nav-menu');
     navMenu.classList.toggle('active');
-    
-    // Animate hamburger menu
     const mobileMenu = document.querySelector('.mobile-menu');
     mobileMenu.classList.toggle('active');
 }
@@ -3381,15 +3420,11 @@ function toggleMobileMenu() {
 function toggleFAQ(element) {
     const faqItem = element.parentElement;
     const allItems = document.querySelectorAll('.faq-item');
-    
-    // Close all other FAQs
     allItems.forEach(item => {
         if (item !== faqItem) {
             item.classList.remove('active');
         }
     });
-    
-    // Toggle current FAQ
     faqItem.classList.toggle('active');
 }
 
@@ -3405,7 +3440,6 @@ function toggleCurrency(currency) {
     document.getElementById('usdBtn').classList.toggle('active', currency === 'USD');
     document.getElementById('currencySymbol').textContent = currency;
     
-    // Update input placeholder
     const input = document.getElementById('investmentAmount');
     if (input.value) {
         if (currency === 'USD') {
@@ -3414,7 +3448,6 @@ function toggleCurrency(currency) {
             input.value = Math.round(parseFloat(input.value) * usdToSar);
         }
     }
-    
     calculateEquity();
 }
 
@@ -3443,27 +3476,18 @@ function calculateEquity() {
         investmentSAR = investmentSAR * usdToSar;
     }
     
-    // Update slider position
     document.getElementById('investmentSlider').value = investmentSAR;
-    
-    // Calculate equity percentage
     const equityPercentage = (investmentSAR / companyValuation) * 100;
-    
-    // Calculate returns
     const annualReturn = investmentSAR * expectedROI;
     const fiveYearReturn = investmentSAR * (Math.pow(1 + expectedROI, 5) - 1);
     
-    // Update results
     document.getElementById('equityPercentage').textContent = equityPercentage.toFixed(2) + '%';
     
     const currencyPrefix = currentCurrency === 'SAR' ? 'SAR ' : '$';
     document.getElementById('annualReturn').textContent = currencyPrefix + formatNumber(currentCurrency === 'USD' ? annualReturn / usdToSar : annualReturn);
     document.getElementById('fiveYearReturn').textContent = currencyPrefix + formatNumber(currentCurrency === 'USD' ? fiveYearReturn / usdToSar : fiveYearReturn);
     
-    // Update chart
     drawEquityChart(equityPercentage);
-    
-    // Update legend
     document.getElementById('yourEquityLegend').textContent = equityPercentage.toFixed(2) + '%';
     document.getElementById('othersEquityLegend').textContent = (100 - equityPercentage).toFixed(2) + '%';
 }
@@ -3486,10 +3510,8 @@ function drawEquityChart(equityPercentage) {
     const centerY = canvas.height / 2;
     const radius = 80;
     
-    // Clear canvas
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     
-    // Draw your equity portion
     const yourAngle = (equityPercentage / 100) * 2 * Math.PI;
     ctx.beginPath();
     ctx.arc(centerX, centerY, radius, -Math.PI/2, -Math.PI/2 + yourAngle);
@@ -3497,20 +3519,17 @@ function drawEquityChart(equityPercentage) {
     ctx.fillStyle = '#2ecc71';
     ctx.fill();
     
-    // Draw others' equity portion
     ctx.beginPath();
     ctx.arc(centerX, centerY, radius, -Math.PI/2 + yourAngle, -Math.PI/2 + 2 * Math.PI);
     ctx.lineTo(centerX, centerY);
     ctx.fillStyle = '#34495e';
     ctx.fill();
     
-    // Draw white circle in center
     ctx.beginPath();
     ctx.arc(centerX, centerY, radius * 0.6, 0, 2 * Math.PI);
     ctx.fillStyle = 'white';
     ctx.fill();
     
-    // Draw percentage text
     ctx.font = 'bold 24px system-ui';
     ctx.fillStyle = '#2ecc71';
     ctx.textAlign = 'center';
@@ -3556,9 +3575,8 @@ window.addEventListener('load', function() {
     }, 100);
 });
 
-console.log('NTT Groups website loaded successfully');
+console.log('NTT Groups website with dual email notifications loaded successfully');
 </script>
-
 </section>
 
 <div class="technical-support-card">
